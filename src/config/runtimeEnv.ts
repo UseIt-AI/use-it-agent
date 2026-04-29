@@ -36,25 +36,13 @@ export const API_URL = readEnv('VITE_API_URL') || 'http://127.0.0.1:8323';
 /** 使用 127.0.0.1：Electron 打包后 Local Engine 仅监听 IPv4；Windows 上 localhost 常解析到 ::1 会导致 fetch 失败 */
 export const LOCAL_ENGINE_URL = readEnv('VITE_LOCAL_ENGINE_URL') || 'http://127.0.0.1:8324';
 
-/**
- * 功能开关：须用 `import.meta.env.VITE_*` 字面量访问，勿用 `import.meta.env[key]`，
- * 否则 Vite 构建时不会注入该变量，客户端会一直读到 undefined（表现为永远 false）。
- */
-function envFlag(name: 'VITE_ENABLE_VM' | 'VITE_ENABLE_REMOTE_CONTROL'): boolean {
-  const raw =
-    name === 'VITE_ENABLE_VM'
-      ? import.meta.env.VITE_ENABLE_VM
-      : import.meta.env.VITE_ENABLE_REMOTE_CONTROL;
+/** 功能开关：远程控制功能是否可见（默认关闭） */
+export const REMOTE_CONTROL_ENABLED = (() => {
+  const raw = import.meta.env.VITE_ENABLE_REMOTE_CONTROL;
   if (raw === true || raw === false) return raw;
   const s = String(raw ?? '').trim().toLowerCase();
   return s === 'true' || s === '1' || s === 'yes';
-}
-
-/** 功能开关：虚拟机相关功能是否可见（默认关闭） */
-export const VM_ENABLED = envFlag('VITE_ENABLE_VM');
-
-/** 功能开关：远程控制功能是否可见（默认关闭） */
-export const REMOTE_CONTROL_ENABLED = envFlag('VITE_ENABLE_REMOTE_CONTROL');
+})();
 
 /**
  * 获取 API URL（函数形式，方便动态获取）

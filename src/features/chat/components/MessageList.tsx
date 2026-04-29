@@ -24,10 +24,6 @@ import { LoadingSpinner } from './StatusIcons';
 import { SyncProgressCard, DeleteConfirmationCard, type SyncProgressInfo, type DeletedFileInfo } from './SyncStatusCard';
 import { ImagePreviewModal } from './ImagePreviewModal';
 
-// 兼容旧版本的组件导入 (deprecated)
-import { ComputerUseStep } from './.deprecated/ComputerUseStep';
-import { WorkflowStepCard } from './.deprecated/WorkflowStepCard';
-import { ToolStepCard } from './.deprecated/ToolStepCard';
 
 interface MessageListProps {
   messages: Message[];
@@ -403,13 +399,7 @@ const LegacyMessageRenderer: React.FC<{
   message: Message;
   isUser: boolean;
 }> = ({ message, isUser }) => {
-  const toolCalls = message.details?.tool_calls || [];
-  const hasToolCalls = toolCalls.length > 0;
-  const lastTool = toolCalls[toolCalls.length - 1];
-  const hasRunningTool = lastTool?.status === 'running';
-  const contentBeforeTools = hasToolCalls ? '' : (message.content || '');
-  const contentAfterTools = hasToolCalls && !hasRunningTool ? (message.content || '') : '';
-  const sections = parseMessageSections(contentBeforeTools, message.details);
+  const sections = parseMessageSections(message.content || '', message.details);
 
   return (
     <>
@@ -424,62 +414,9 @@ const LegacyMessageRenderer: React.FC<{
             </div>
           )}
 
-          {section.cuaSteps && section.cuaSteps.length > 0 && (
-            <div className="flex flex-col gap-3 mt-4">
-              {section.cuaSteps.map((step: any) => (
-                <ComputerUseStep
-                  key={step.stepNumber}
-                  stepNumber={step.stepNumber}
-                  action={step.action}
-                  reasoning={step.reasoning}
-                  screenshot={step.screenshot}
-                  actionDetails={step.actionDetails}
-                  status={step.status}
-                />
-              ))}
-            </div>
-          )}
-
-          {section.workflowCards && section.workflowCards.length > 0 && (
-            <div className="flex flex-col gap-2 mt-4">
-              {section.workflowCards.map((step: any, cardIdx: number) => (
-                <WorkflowStepCard
-                  key={step.id || cardIdx}
-                  type={step.type}
-                  title={step.title}
-                  content={step.content}
-                  details={step.details}
-                  status={step.status}
-                  markdown={step.markdown}
-                />
-              ))}
-            </div>
-          )}
         </div>
       ))}
 
-      {hasToolCalls && (
-        <div className="flex flex-col gap-2 mt-4">
-          {message.details.tool_calls.map((tool: any, idx: number, arr: any[]) => {
-            const isLastRunning = idx === arr.length - 1 && tool.status === 'running';
-            const streamingReasoning = isLastRunning ? message.content : undefined;
-            return (
-              <ToolStepCard
-                key={tool.id || idx}
-                toolName={tool.toolName}
-                toolDisplayName={tool.toolDisplayName}
-                status={tool.status}
-                input={tool.input}
-                output={tool.output}
-                error={tool.error}
-                duration={tool.duration}
-                timestamp={tool.timestamp}
-                reasoning={streamingReasoning || tool.reasoning}
-              />
-            );
-          })}
-        </div>
-      )}
 
       {message.details?.excel_steps && message.details.excel_steps.length > 0 && (
         <div className="flex flex-col gap-2 mt-4 bg-blue-50/30 border border-blue-100 rounded-md p-3">
@@ -506,11 +443,6 @@ const LegacyMessageRenderer: React.FC<{
         </div>
       )}
 
-      {contentAfterTools && (
-        <div className="mt-4 text-gray-800">
-          <MarkdownContent content={contentAfterTools} isUser={false} />
-        </div>
-      )}
     </>
   );
 };

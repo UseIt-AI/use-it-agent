@@ -1,45 +1,6 @@
 export {};
 
 declare global {
-  interface VmExistsResult {
-    exists: boolean;
-    vmName: string | null;
-  }
-
-  interface VmInstallProgress {
-    step: string;
-    stepIndex: number;
-    totalSteps: number;
-    percent: number;
-    message: string;
-    error?: string;
-  }
-
-  interface ServiceDeployProgress {
-    step: string;
-    stepIndex: number;
-    totalSteps: number;
-    percent: number;
-    message: string;
-    error?: string;
-  }
-
-  interface ServiceDeployConfig {
-    vmName: string;
-    username: string;
-    password: string;
-  }
-
-  interface ServiceStatusConfig {
-    vmName: string;
-    serviceKey: 'local_engine' | 'computer_server';
-  }
-
-  interface ServiceControlConfig {
-    vmName: string;
-    serviceKey?: 'local_engine' | 'computer_server';
-  }
-
   interface Project {
     id: string;
     name: string;
@@ -68,36 +29,6 @@ declare global {
       importProjectFolder?: () => Promise<Project | null>;
       deleteProject: (projectId: string) => Promise<{ success: boolean; error?: string }>;
       showAddFilesToWorkspaceDialog?: () => Promise<{ canceled: boolean; filePaths: string[] }>;
-      // VM 管理
-      checkHyperVEnabled?: () => Promise<boolean>;
-      checkVmExists?: (vmNamePattern: string) => Promise<VmExistsResult>;
-      getVmIp?: (vmName: string) => Promise<string>;
-      getVmStatus?: (vmName: string) => Promise<string>;
-      startVm?: (vmName: string) => Promise<boolean>;
-      stopVm?: (vmName: string) => Promise<boolean>;
-      deleteVm?: (vmName: string) => Promise<boolean>;
-      fixHyperVPermission?: () => Promise<boolean>;
-      getVmSpecs?: (vmName: string) => Promise<any>;
-      setVmSpecs?: (config: { vmName: string; cpuCores: number; memoryGB: number; isDynamicMemory: boolean }) => Promise<boolean>;
-      ensureVmVnc?: (args: { vmName: string; username?: string; password?: string }) => Promise<{ vmName: string; installed: boolean; alreadyInstalled: boolean }>;
-      // VM snapshots
-      listVmSnapshots?: (vmName: string) => Promise<Array<{ Id: string; Name: string; ParentCheckpointId?: string; CreationTime?: string; CheckpointType?: string }>>;
-      createVmSnapshot?: (args: { vmName: string; snapshotName: string; saveState: boolean }) => Promise<void>;
-      restoreVmSnapshot?: (args: { vmName: string; snapshotId: string }) => Promise<void>;
-      // VM export
-      vmSelectExportDir?: () => Promise<{ path: string | null; canceled: boolean }>;
-      vmExportToFolder?: (config: { vmName: string; exportDir: string }) => Promise<{ success: boolean; error?: string; vmName?: string; exportPath?: string }>;
-      // VM 安装
-      vmCheckEnvironment?: (installDir?: string) => Promise<any>;
-      vmEnableHyperV?: () => Promise<{ success: boolean; needsReboot: boolean }>;
-      vmSelectIso?: () => Promise<{ path: string | null; canceled: boolean }>;
-      vmSelectInstallDir?: () => Promise<{ path: string | null; canceled: boolean }>;
-      vmSelectRestoreDir?: () => Promise<{ path: string | null; canceled: boolean }>;
-      vmValidateIso?: (isoPath: string) => Promise<{ valid: boolean; error?: string }>;
-      vmInstall?: (config: any) => Promise<{ success: boolean; error?: string }>;
-      vmRestoreFromFolder?: (config: { vmName?: string; folderPath: string }) => Promise<{ success: boolean; error?: string; vmName?: string; checkpointCount?: number; restoreMode?: string }>;
-      vmInstallCancel?: () => Promise<void>;
-      onVmInstallProgress?: (callback: (progress: VmInstallProgress) => void) => () => void;
       // 文件系统 API
       fsGetProjectRoot?: (projectId?: string) => Promise<string>;
       fsGetSkillsRoot?: (userId?: string) => Promise<string>;
@@ -132,42 +63,11 @@ declare global {
       uploadPresignedPut?: (args: { requestId: string; filePath: string; uploadUrl: string; method?: string; headers?: Record<string, string> }) => Promise<{ success: boolean; etag?: string; error?: string }>;
       onS3UploadProgress?: (callback: (payload: { requestId: string; loaded: number; total: number; percent: number }) => void) => () => void;
 
-      // Service Deployment API (VM 服务部署)
-      serviceHasFiles?: () => Promise<boolean>;
-      serviceGetLocalVersion?: () => Promise<{ success: boolean; version?: string }>;
-      serviceDeploy?: (config: ServiceDeployConfig) => Promise<{ success: boolean; error?: string }>;
-      serviceCheckStatus?: (config: ServiceStatusConfig) => Promise<{ success: boolean; status: { installed: boolean; version?: string }; error?: string }>;
-      serviceStart?: (config: ServiceControlConfig) => Promise<{ success: boolean; error?: string }>;
-      serviceStop?: (config: ServiceControlConfig) => Promise<{ success: boolean; error?: string }>;
-      serviceRestart?: (config: ServiceControlConfig) => Promise<{ success: boolean; error?: string }>;
-      serviceGetLogs?: (config: ServiceStatusConfig & { lines?: number }) => Promise<string>;
-      onServiceDeployProgress?: (callback: (progress: ServiceDeployProgress) => void) => () => void;
-
-      // VM 共享文件夹 (projects 父目录挂载为 Z: 盘)
-      vmShareEnsure?: (config: {
-        vmName: string;
-        username?: string;
-        password?: string;
-        projectsRootPath: string;
-      }) => Promise<{ success: boolean; driveLetter: string; error?: string }>;
-      vmShareHealth?: (config: {
-        vmName: string;
-        username?: string;
-        password?: string;
-      }) => Promise<{ success: boolean; healthy: boolean; shareExists?: boolean; driveMapped?: boolean; error?: string }>;
-      vmShareTeardown?: (config: {
-        vmName: string;
-        username?: string;
-        password?: string;
-      }) => Promise<{ success: boolean; error?: string }>;
-      vmShareGetVmPath?: (projectName: string) => Promise<string>;
-
       // OAuth 登录
       startGoogleOAuth?: (oauthUrl: string) => Promise<{ success: boolean; url?: string; error?: string }>;
-      
+
       // Dev Tools
       toggleDevTools: () => void;
     };
   }
 }
-

@@ -64,13 +64,3 @@ export {
   persistToolEnd,
   type PersistenceContext,
 } from './persistenceHandler';
-
-// ============================================================
-// 以下模块已废弃，移至 .deprecated 文件夹
-// ============================================================
-// - computerUseHandler.ts (功能已被 localEngine/guiHandler.ts 覆盖)
-// - drawHandler.ts        (AutoCAD 绘图)
-// - excelHandler.ts       (Excel 试算)
-// - excelExecutorHandler.ts (Excel 文本执行器)
-// - workflowHandler.ts    (旧版工作流事件处理)
-// - toolHandler.ts        (Tool 事件处理)

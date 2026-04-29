@@ -18,10 +18,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { ProjectProvider, useProject } from './contexts/ProjectContext';
 import { StoreProvider } from './contexts/RootStoreContext';
 import AppLoadingScreen from './components/AppLoadingScreen';
-
-// 页面懒加载：只在路由匹配时才下载对应 chunk
-// WorkspacePage 含 Monaco Editor / ReactFlow，懒加载可大幅减小首包体积
-const WorkspacePage = lazy(() => import('./pages/WorkspacePage'));
+import WorkspacePage from './pages/WorkspacePage';
 
 // Desktop 专用服务
 import { useRemotePolling } from './stores/useRemotePolling';
@@ -96,7 +93,6 @@ function RemoteTaskPollerProvider({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
-
 export function App() {
   return (
     <StoreProvider>
@@ -108,23 +104,21 @@ export function App() {
                 <Route
                   path="/"
                   element={
-                      <RemoteTaskPollerProvider>
-                        <ProjectRedirect />
-                      </RemoteTaskPollerProvider>
+                    <RemoteTaskPollerProvider>
+                      <ProjectRedirect />
+                    </RemoteTaskPollerProvider>
                   }
                 />
-
                 <Route
                   path="/workspace"
                   element={
-                      <RemoteTaskPollerProvider>
-                        <ProjectRoute>
-                          <WorkspacePage />
-                        </ProjectRoute>
-                      </RemoteTaskPollerProvider>
+                    <RemoteTaskPollerProvider>
+                      <ProjectRoute>
+                        <WorkspacePage />
+                      </ProjectRoute>
+                    </RemoteTaskPollerProvider>
                   }
                 />
-
                 {/* Backward compatibility: old project-scoped URLs → /workspace */}
                 <Route path="/project/*" element={<Navigate to="/workspace" replace />} />
                 <Route path="/chat" element={<Navigate to="/" replace />} />

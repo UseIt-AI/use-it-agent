@@ -1,17 +1,14 @@
 import React, { useRef, useState, useCallback, useMemo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowUp, Square, ChevronDown, X, File, Folder, ImageIcon } from 'lucide-react';
+import { ArrowUp, Square, X, File, Folder, ImageIcon } from 'lucide-react';
 import type { AgentId } from '../hooks/useChat';
 import type { AttachedImage } from '../handlers/types';
 import type { FileNode } from '@/features/workspace/file-explorer/types';
 import { extractFilePaths, parseQuickStartMessage } from '@/features/workflow/utils/quickStartParser';
 import { useChatAgents } from '../hooks/useChatAgents';
-import { ComputerSelector } from './ComputerSelector';
 import { ComputerConflictDialog } from './ComputerConflictDialog';
-import { AgentDropdown } from './AgentDropdown';
 import { ImagePreviewModal } from './ImagePreviewModal';
 import { RichTextInput } from '@/features/workspace/components/RichTextInput';
-import { VM_ENABLED } from '@/config/runtimeEnv';
 
 export interface AttachedFile {
   id: string;
@@ -48,12 +45,12 @@ interface ChatInputProps {
   onAddFile?: (filePath: string, fileName: string, type: 'file' | 'folder') => void;
 }
 
-export const ChatInput: React.FC<ChatInputProps> = ({ 
-  input, 
-  setInput, 
-  isLoading, 
+export const ChatInput: React.FC<ChatInputProps> = ({
+  input,
+  setInput,
+  isLoading,
   isStopping,
-  selectedAgentId, 
+  selectedAgentId,
   setSelectedAgentId,
   onSend,
   onStop,
@@ -201,22 +198,22 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             {attachedImages.map((img) => {
               const src = img.url || img.base64 || '';
               return (
-              <div
-                key={img.id}
-                className="relative group/img w-16 h-16 rounded-md overflow-hidden border border-gray-200 bg-gray-50 cursor-pointer"
-                onDoubleClick={() => setPreviewImage({ src, alt: img.name })}
-              >
-                <img src={src} alt={img.name} className="w-full h-full object-cover" draggable={false} />
-                {onRemoveImage && (
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); onRemoveImage(img.id); }}
-                    className="absolute top-0.5 right-0.5 opacity-0 group-hover/img:opacity-100 transition-opacity p-0.5 bg-black/50 hover:bg-black/70 rounded-full flex-shrink-0"
-                  >
-                    <X className="w-3 h-3 text-white" />
-                  </button>
-                )}
-              </div>
+                <div
+                  key={img.id}
+                  className="relative group/img w-16 h-16 rounded-md overflow-hidden border border-gray-200 bg-gray-50 cursor-pointer"
+                  onDoubleClick={() => setPreviewImage({ src, alt: img.name })}
+                >
+                  <img src={src} alt={img.name} className="w-full h-full object-cover" draggable={false} />
+                  {onRemoveImage && (
+                    <button
+                      type="button"
+                      onClick={(e) => { e.stopPropagation(); onRemoveImage(img.id); }}
+                      className="absolute top-0.5 right-0.5 opacity-0 group-hover/img:opacity-100 transition-opacity p-0.5 bg-black/50 hover:bg-black/70 rounded-full flex-shrink-0"
+                    >
+                      <X className="w-3 h-3 text-white" />
+                    </button>
+                  )}
+                </div>
               );
             })}
           </div>
@@ -261,61 +258,13 @@ export const ChatInput: React.FC<ChatInputProps> = ({
           className="px-4 pt-3.5 pb-0"
         />
       </div>
-      
+
       {/* 底部工具栏 */}
       <div className="flex items-end justify-between px-2.5 py-2 bg-transparent gap-2">
-        
+
         {/* 左侧选择器组 - 可缩小 */}
         <div className="flex items-end min-w-0 flex-1">
-          {/* Agent 选择器 (嵌入式) */}
-          <div className="relative min-w-0 flex-shrink">
-            <button
-              type="button"
-              onClick={() => setIsAgentMenuOpen(!isAgentMenuOpen)}
-              className={`flex items-center gap-1 px-2 py-1 rounded-md hover:bg-black/5 transition-all text-[11px] font-medium group/selector max-w-full ${agentFlash ? 'bg-orange-100 text-orange-700 animate-agent-flash' : 'text-black/45'}`}
-            >
-              <span className={`truncate ${currentAgent && !agentFlash ? '' : agentFlash ? '' : 'text-black/40'}`}>
-                {currentAgent?.label || (agentsLoading ? 'Loading...' : 'Select Workflow')}
-              </span>
-              <ChevronDown className={`w-2.5 h-2.5 flex-shrink-0 ${agentFlash ? 'text-orange-500' : 'text-black/30 group-hover/selector:text-black/60'}`} />
-            </button>
 
-            {/* Agent 下拉菜单 */}
-            {isAgentMenuOpen && (
-              <AgentDropdown
-                agents={agents}
-                loading={agentsLoading}
-                selectedAgentId={selectedAgentId}
-                onSelect={(agentId) => {
-                  setSelectedAgentId(agentId);
-                  setIsAgentMenuOpen(false);
-                }}
-                onClose={() => setIsAgentMenuOpen(false)}
-                position="top"
-                width={220}
-              />
-            )}
-          </div>
-
-          {VM_ENABLED && (
-            <>
-              {/* 分隔符 */}
-              <div className="w-px h-4 bg-black/10 mx-1 flex-shrink-0" />
-
-              {/* 电脑选择器（VM 关闭时仅本机，无需切换） */}
-              <div className="min-w-0 flex-shrink">
-                <ComputerSelector
-                  value={selectedComputer}
-                  onChange={(name) => {
-                    onComputerChange?.(name);
-                  }}
-                  chatId={chatId}
-                  disabled={isLoading}
-                  onConflict={handleComputerConflict}
-                />
-              </div>
-            </>
-          )}
         </div>
 
         {/* 右侧按钮组 - 固定不缩小 */}
@@ -352,7 +301,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
               className={`
                 w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0 transition-all duration-200
                 ${(input.trim() || attachedFiles.length > 0 || attachedImages.length > 0) && !isLoading
-                  ? 'bg-[#FF4D00] text-white hover:bg-[#E64500] shadow-sm' 
+                  ? 'bg-[#FF4D00] text-white hover:bg-[#E64500] shadow-sm'
                   : 'bg-black/10 text-black/25 cursor-not-allowed'
                 }
               `}
