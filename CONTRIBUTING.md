@@ -1,6 +1,6 @@
-# Contributing to MantaIt Agent
+# Contributing to Use-It Agent
 
-Thanks for your interest in contributing to MantaIt Agent. This project is an open-source desktop agent for operating professional software, and it improves every time someone shares a real workflow, fixes a rough edge, or adds support for a new app.
+Thanks for your interest in contributing to Use-It Agent. This project is an open-source desktop agent for operating professional software, and it improves every time someone shares a real workflow, fixes a rough edge, or adds support for a new app.
 
 This guide explains how to get set up, what we welcome, and how we work together.
 
@@ -54,7 +54,7 @@ Trade-offs, known limitations, follow-ups.
 
 ## Adding a new software adapter
 
-If you want MantaIt Agent to support a new app, please:
+If you want Use-It Agent to support a new app, please:
 
 1. Open an issue describing the app, why it matters, and which workflows you want to enable.
 2. Note which native interface you plan to use (COM, scripting engine, plugin SDK, app API, etc.).
@@ -83,7 +83,7 @@ A good issue includes:
 
 ## Community and conduct
 
-We want MantaIt Agent to be a friendly, focused, and ambitious community. Be respectful, assume good intent, and help others when you can.
+We want Use-It Agent to be a friendly, focused, and ambitious community. Be respectful, assume good intent, and help others when you can.
 
 If anything feels off, or you want to discuss a sensitive topic privately, reach out through Discord or open a private issue.
 
