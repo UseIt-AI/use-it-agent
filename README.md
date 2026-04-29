@@ -84,9 +84,7 @@ Today's AI agents take very different approaches when it comes to actually using
 |---|---|---|---|---|---|
 | Pro software ecosystem | ❌ Not supported | ⚠️ Open-source / CLI only | ✅ Any GUI app | ⚠️ Apps with MCP servers | ✅ Native pro apps |
 | Accuracy | ✅ High | ✅ High | ❌ Low (pixel / click errors) | ✅ High | ✅ High |
-| Speed | ✅ Fast | ✅ Fast | ❌ Slow (UI loops) | ✅ Fast | ✅ Fast (native calls) |
 | Feature coverage | ❌ File output only | ⚠️ Limited to CLI commands | ⚠️ Wide but fragile | ⚠️ Limited to MCP surface | ✅ Wide and native to the app |
-| Cross-software workflow | ✅ Strong (code / script glue) | ✅ Strong (shell pipelines) | ⚠️ Medium (window switching) | ⚠️ Medium | ✅ Strong (OS-level orchestration) |
 | Works inside the user's GUI | ❌ Headless, no GUI | ❌ Headless, no GUI | ✅ Same app the user sees | ✅ Same app the user sees | ✅ Same app the user sees |
 | Setup complexity | ✅ Low | ⚠️ Medium | ✅ Low | ❌ High (per-app server) | ✅ Low (install once) |
 
