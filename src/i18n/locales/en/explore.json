@@ -1,0 +1,40 @@
+{
+  "explore": {
+    "headline": "Think it, done.",
+    "subtitle": "Just describe your idea, let AI handle the rest",
+    "placeholder": "Describe the effect you want, or drag your files here…",
+    "uploadTitle": "Upload image",
+    "uploadLabel": "Upload attachment",
+    "creating": "Creating…",
+    "generate": "Generate",
+    "officialExamples": "Recommended",
+    "agentGallery": "Agent Gallery",
+    "agentGallerySubtitle": "Choose an agent to get started instantly, or create your own custom workflow.",
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "hints": {
+      "prompt": "What can I do with UseIt Studio?",
+      "dragWorkflow": "Drag a workflow to chat box to load a quick start message.",
+      "clickCard": "Click a recommended card to run an existing agent."
+    },
+    "complexity": {
+      "basic": "Basic",
+      "medium": "Medium",
+      "complex": "Complex"
+    },
+    "presets": {
+      "screenshot2ppt": {
+        "name": "Screenshot to PPT",
+        "dur": "Turn an image into an editable PowerPoint slide"
+      },
+      "paper2ppt": {
+        "name": "Paper to Meeting Slides",
+        "dur": "Generate a group-meeting presentation from a paper"
+      },
+      "wechat": {
+        "name": "Map your WeChat network",
+        "dur": "Analyze my WeChat history to understand my social connections, then send message to my friends."
+      }
+    }
+  }
+}

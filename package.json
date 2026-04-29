@@ -1,0 +1,165 @@
+{
+  "name": "useit",
+  "version": "0.2.3",
+  "private": true,
+  "main": "dist/main/electron/main.js",
+  "scripts": {
+    "dev": "concurrently \"npm run ui:dev\" \"npm run electron:dev:wait\"",
+    "ui:dev": "vite --port 3000 --strictPort",
+    "electron:dev": "tsc -p electron && electron .",
+    "electron:dev:wait": "wait-on -l -t 60000 tcp:127.0.0.1:3000 && npm run electron:dev",
+    "build": "npm run ui:build && tsc -p electron",
+    "ui:build": "vite build --mode production",
+    "prepare:ffmpeg": "node scripts/prepare-ffmpeg.js",
+    "pack": "npm run prepare:ffmpeg && npm run build && electron-builder",
+    "pack:dir": "npm run prepare:ffmpeg && npm run build && electron-builder --dir",
+    "pack:dir:debug": "npm run prepare:ffmpeg && npm run build && cross-env DEBUG_MODE=1 electron-builder --dir",
+    "pack:nsis": "npm run prepare:ffmpeg && npm run build && electron-builder --win nsis",
+    "pack:portable": "npm run prepare:ffmpeg && npm run build && electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.useit.studio",
+    "productName": "UseIt-Studio",
+    "copyright": "Copyright © 2025-2026 UseIt Studio",
+    "publish": {
+      "provider": "generic",
+      "url": "https://storage.useit.space/release/",
+      "channel": "beta",
+      "updaterCacheDirName": "useit-updater"
+    },
+    "protocols": {
+      "name": "useit",
+      "schemes": [
+        "useit"
+      ]
+    },
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/main/**/*",
+      "dist/renderer/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/bin",
+        "to": "bin",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "resources/services",
+        "to": "services",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "publisherName": "UseIt Studio",
+      "target": [
+        {
+          "target": "dir",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "deleteAppDataOnUninstall": true,
+      "perMachine": true
+    },
+    "portable": {
+      "artifactName": "${productName}-Portable-${version}.${ext}"
+    }
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.28.4",
+    "@douyinfe/semi-icons": "^2.93.0",
+    "@douyinfe/semi-ui": "^2.93.0",
+    "@monaco-editor/react": "^4.7.0",
+    "@novnc/novnc": "1.5.0",
+    "@stripe/react-stripe-js": "^6.1.0",
+    "@stripe/stripe-js": "^9.0.1",
+    "@tiptap/core": "^3.22.3",
+    "@tiptap/pm": "^3.22.3",
+    "@tiptap/react": "^3.22.3",
+    "@tiptap/starter-kit": "^3.22.3",
+    "axios": "^1.6.7",
+    "builder-util-runtime": "^9.5.1",
+    "clsx": "^2.1.1",
+    "debug": "^4.4.3",
+    "driver.js": "^1.4.0",
+    "electron-log": "^5.4.3",
+    "electron-updater": "^6.8.3",
+    "fernet": "^0.3.2",
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
+    "fs-extra": "^11.3.4",
+    "i18next": "^25.7.3",
+    "js-yaml": "^4.1.1",
+    "koffi": "^2.15.0",
+    "lazy-val": "^1.0.5",
+    "lodash.escaperegexp": "^4.1.2",
+    "lodash.isequal": "^4.5.0",
+    "lucide-react": "^0.330.0",
+    "material-icon-theme": "^5.31.0",
+    "mobx": "^6.15.0",
+    "mobx-react-lite": "^4.1.1",
+    "react": "^18.2.0",
+    "react-complex-tree": "^2.6.1",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^16.5.0",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.30.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "reactflow": "^11.11.4",
+    "remark-gfm": "^4.0.0",
+    "semver": "^7.7.4",
+    "sudo-prompt": "^9.2.1",
+    "tailwind-merge": "^2.6.0",
+    "tiny-typed-emitter": "^2.1.0",
+    "uiohook-napi": "^1.5.4",
+    "ws": "^8.18.3",
+    "zod": "^4.3.6",
+    "zustand": "^5.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/plugin-transform-runtime": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@types/debug": "^4.1.12",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/react-syntax-highlighter": "^15.5.11",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.4.17",
+    "babel-loader": "^10.0.0",
+    "concurrently": "^8.2.2",
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "vite": "^7.1.4",
+    "wait-on": "^7.2.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "ffmpeg-static",
+      "koffi",
+      "uiohook-napi",
+      "electron"
+    ]
+  }
+}

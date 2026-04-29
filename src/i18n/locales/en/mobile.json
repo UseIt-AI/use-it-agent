@@ -1,0 +1,35 @@
+{
+  "mobile": {
+    "computerSelector": {
+      "loading": "Loading...",
+      "selectComputer": "Select Computer",
+      "noComputers": "No computers available",
+      "manageEnvironment": "Manage Environment",
+      "testConnection": "Test Connection",
+      "testing": "Testing...",
+      "testSuccess": "Connected",
+      "testFailed": "Connection Failed",
+      "lastTested": "Last tested",
+      "notTested": "Not tested",
+      "status": {
+        "online": "Online",
+        "offline": "Offline",
+        "busy": "Busy",
+        "unknown": "Unknown"
+      }
+    },
+    "header": {
+      "back": "Back",
+      "logout": "Logout"
+    },
+    "chat": {
+      "inputPlaceholder": "Type a message...",
+      "send": "Send",
+      "stop": "Stop",
+      "selectAgent": "Select Agent"
+    },
+    "status": {
+      "pcOffline": "PC offline. Please make sure UseIt Studio is running on your computer."
+    }
+  }
+}
