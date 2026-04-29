@@ -67,38 +67,20 @@ This is what we mean by a *Computer Use Agent for professional software*: an age
 
 ## <img src="assets/manta_wink.png" alt="Contributing" width="44" /> Contributing
 
+MantaIt Agent is built in the open, and it grows with every adapter, workflow, and bug report you bring in. Whether you are a developer adding a new pro-software adapter, a designer sharing a real workflow, or a user filing your first issue, you are welcome here.
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for setup instructions, project conventions, and how to propose new adapters, skills, and features.
+
 ## <img src="assets/manta_question.png" alt="Roadmap" width="44" /> Roadmap
 
-MantaIt Agent is moving fast. Here is what we are working on now, what is coming next, and what we want to build later.
+We will keep shipping in the open. The next things on our list:
 
-### Now
+- [ ] **Agent architecture**: keep evolving the runtime, planner, perception, and safety layers.
+- [ ] **More professional software**: progressively support the Adobe family (Premiere Pro, Photoshop, Illustrator), the Autodesk family (AutoCAD, Revit, Fusion), and more.
+- [ ] **Cross-software workflows**: let one agent orchestrate tasks across multiple apps, e.g. Excel → PowerPoint → PDF, or Photoshop → Premiere.
+- [ ] **Open ecosystem**: skills, plugins, and APIs so the community can contribute new adapters and workflows.
 
-- [x] Core agent runtime with planner, perception, and tool layers
-- [x] Native control through Windows COM and OS APIs
-- [x] First-wave software adapters: PowerPoint, Word, Excel, WPS, AutoCAD
-- [x] Single-app task execution with human-in-the-loop confirmation
-- [ ] Stable CLI and onboarding flow
-- [ ] Local logs, task replay, and debug view
-
-### Next
-
-- [ ] Adapters for Premiere Pro, Photoshop, Figma, Blender, DaVinci Resolve
-- [ ] Cross-software workflows (e.g. Excel → PowerPoint → export to PDF)
-- [ ] Skill packs: reusable creative workflows shared across users
-- [ ] Project memory: assets, decisions, and history per workspace
-- [ ] Better safety layer: previews, confirmations, and reversible actions
-- [ ] Plugin and extension API for third-party developers
-
-### Later
-
-- [ ] macOS support through native desktop APIs
-- [ ] Linux support for open-source creative tools
-- [ ] Multi-agent collaboration on the same project
-- [ ] Marketplace for adapters, skills, and workflows
-- [ ] Public benchmarks for professional software operation
-- [ ] Self-hosted team edition with shared agents and workspaces
-
-We track everything in [GitHub Issues](https://github.com/UseIt-AI/OpenCreativeWork/issues). If you want a feature or a new app supported, please open an issue or vote on existing ones.
+Track progress and propose ideas in [GitHub Issues](https://github.com/UseIt-AI/OpenCreativeWork/issues).
 
 ## <img src="assets/manta_sleeping.png" alt="Community" width="44" /> Community
 
