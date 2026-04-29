@@ -37,6 +37,3 @@ We gratefully acknowledge MiraclePlus (YC China) for supporting this project.
 
 <img src="assets/MiraclePlus.jpg" alt="MiraclePlus logo" width="180" />
 
-<p align="center"><strong>✦ Star History ✦</strong></p>
-
-[![Star History Chart](https://api.star-history.com/svg?repos=UseIt-AI/OpenCreativeWork&type=Date)](https://www.star-history.com/#UseIt-AI/OpenCreativeWork&Date)
