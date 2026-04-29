@@ -1,6 +1,6 @@
 <div align="center">
   <h1>
-    <img src="assets/manta_flying.gif" alt="Manta flying" width="80" valign="middle" />
+    <img src="assets/manta_flying.gif" alt="Manta flying" width="108" valign="middle" />
     <span valign="middle">MantaIt</span>
   </h1>
   <p>
@@ -13,19 +13,19 @@
   </p>
 </div>
 
-## <img src="assets/manta_hearts.png" alt="About" width="36" /> About
+## <img src="assets/manta_hearts.png" alt="About" width="44" /> About
 
-## <img src="assets/manta_diagonal.png" alt="Feature" width="36" /> Feature
+## <img src="assets/manta_diagonal.png" alt="Feature" width="44" /> Feature
 
-## <img src="assets/manta_shocked.png" alt="Architecture" width="36" /> Architecture
+## <img src="assets/manta_shocked.png" alt="Architecture" width="44" /> Architecture
 
-## <img src="assets/manta_slide.png" alt="Install Quick Start" width="36" /> Install Quick Start
+## <img src="assets/manta_slide.png" alt="Install Quick Start" width="44" /> Install Quick Start
 
-## <img src="assets/manta_wink.png" alt="Contributing" width="36" /> Contributing
+## <img src="assets/manta_wink.png" alt="Contributing" width="44" /> Contributing
 
-## <img src="assets/manta_question.png" alt="Roadmap" width="36" /> Roadmap
+## <img src="assets/manta_question.png" alt="Roadmap" width="44" /> Roadmap
 
-## <img src="assets/manta_sleeping.png" alt="Community" width="36" /> Community
+## <img src="assets/manta_sleeping.png" alt="Community" width="44" /> Community
 
 🎮 Discord: [Join the UseIt community](https://discord.gg/u3TTKAJYUm)
 
