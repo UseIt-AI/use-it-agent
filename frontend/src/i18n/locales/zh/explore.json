@@ -1,0 +1,40 @@
+{
+  "explore": {
+    "headline": "想到，即完成。",
+    "subtitle": "只需描述你的想法，其余的交给 AI",
+    "placeholder": "描述你想要的效果，或将素材拖拽到此处…",
+    "uploadTitle": "上传图片",
+    "uploadLabel": "上传附件",
+    "creating": "创建中…",
+    "generate": "生成",
+    "officialExamples": "推荐",
+    "agentGallery": "Agent 模板库",
+    "agentGallerySubtitle": "选择一个 Agent 模板即刻开始，或创建你自己的自定义工作流。",
+    "showMore": "展开更多",
+    "showLess": "收起",
+    "hints": {
+      "prompt": "UseIt Studio 可以做什么？",
+      "dragWorkflow": "拖拽工作流到对话框，即可加载快速开始消息。",
+      "clickCard": "点击推荐卡片，即可运行现成的 Agent。"
+    },
+    "complexity": {
+      "basic": "基础",
+      "medium": "中等",
+      "complex": "复杂"
+    },
+    "presets": {
+      "screenshot2ppt": {
+        "name": "截图秒变PPT",
+        "dur": "把图片变成一张可以编辑的PPT"
+      },
+      "paper2ppt": {
+        "name": "组会谁还手动做PPT呀",
+        "dur": "根据论文内容，生成组会汇报的PPT"
+      },
+      "wechat": {
+        "name": "独栋你的微信人脉",
+        "dur": "Analyze my WeChat history to understand my social connections, then send message to my friends."
+      }
+    }
+  }
+}

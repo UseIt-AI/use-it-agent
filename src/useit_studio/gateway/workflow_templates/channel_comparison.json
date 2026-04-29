@@ -1,0 +1,61 @@
+{
+  "name": "渠道比选报告生成工作流",
+  "description": "自动化执行【线路比选】：使用91卫星图获取线路信息 -> RAG分析 -> 生成Word报告",
+  "version": "1.0",
+  "steps": [
+    {
+      "id": "cua_collect_data",
+      "type": "agent",
+      "name": "CUAAgent",
+      "description": "使用【91卫图助手】软件获取线路1和线路2的信息",
+      "config": {
+        "provider": "openai",
+        "model": "computer-use-preview"
+      },
+      "input": {
+        "type": "combined",
+        "template": "请使用【91卫图助手】软件完成以下任务：\n\n1. 打开【91卫图助手】软件\n2. 打开软件后，点击【图层管理器】\n3. 右键点击【线路比选】，打开下来菜单\n4. 点击【查看属性表】，查看线路的详细信息\n\n任务终止条件，屏幕上出现了包含【长度】数据的表格，即可停止！"
+      },
+      "output_key": "cua_result",
+      "enabled": true
+    },
+    {
+      "id": "rag_generate_report",
+      "type": "node",
+      "name": "RAGNode",
+      "description": "检索线路数据和卫星图，生成比选报告",
+      "config": {
+        "top_k": 10,
+        "expand_query": true,
+        "include_images": true
+      },
+      "input": {
+        "type": "user_input"
+      },
+      "output_key": "report_content",
+      "enabled": true
+    },
+    {
+      "id": "export_report",
+      "type": "node",
+      "name": "ExportNode",
+      "description": "将生成的报告导出为 Word 文档",
+      "config": {
+        "output_dir": "exports",
+        "filename_template": "Channel_Comparison_Report_{timestamp}.docx"
+      },
+      "input": {
+        "type": "previous_step",
+        "step_id": "rag_generate_report"
+      },
+      "output_key": "export_result",
+      "enabled": true
+    }
+  ],
+  "metadata": {
+    "author": "system",
+    "use_case": "【线路比选】",
+    "tags": ["渠道设计", "比选报告", "91卫星图", "Word导出"]
+  }
+}
+

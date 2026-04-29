@@ -1,0 +1,2 @@
+recursive-include src/useit_studio/gateway/data *
+recursive-include src/useit_studio/gateway/config *

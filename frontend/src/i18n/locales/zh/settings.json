@@ -1,0 +1,123 @@
+{
+  "settings": {
+    "title": "设置",
+    "tabs": {
+      "account": "账户",
+      "general": "通用",
+      "apikeys": "API 密钥",
+      "api": "API 配置",
+      "team": "团队",
+      "subscription":"套餐订阅",
+      "transactions": "交易记录",
+      "billing": "账单"
+    },
+    "team": {
+      "title": "团队协作",
+      "comingSoon": "团队协作功能即将上线。"
+    },
+    "account": {
+      "subscription": {
+        "currentPlan": "当前计划",
+        "freePlan": "免费版",
+        "proMember": "专业版会员",
+        "active": "已激活",
+        "upgradeToPro": "升级到专业版"
+      },
+      "profilePicture": {
+        "label": "个人头像",
+        "upload": "上传图片",
+        "remove": "移除",
+        "recommendation": "推荐尺寸：256x256像素 • JPG/PNG/WebP"
+      },
+      "displayName": {
+        "label": "显示名称",
+        "placeholder": "输入您的显示名称",
+        "hint": "此名称将对您的团队成员可见。"
+      },
+      "actions": {
+        "cancel": "取消",
+        "save": "保存更改"
+      }
+    },
+    "general": {
+      "appearance": {
+        "label": "外观",
+        "description": "选择您偏好的主题界面。",
+        "options": {
+          "light": "浅色",
+          "dark": "深色 (即将推出)",
+          "system": "跟随系统 (即将推出)"
+        }
+      },
+      "language": {
+        "label": "语言",
+        "description": "选择界面显示语言。",
+        "options": {
+          "en": "English",
+          "zh": "简体中文 (即将推出)"
+        }
+      },
+      "voiceMode": {
+        "label": "语音模式",
+        "description": "独立全屏语音功能。"
+      }
+    },
+    "subscription":{
+      "loading": "加载记录中...",
+      "noData": "未找到订阅记录.",
+      "unsubscribe":"取消订阅",
+      "rules":"查看积分规则",
+      "credits": "当前积分",
+      "dailyAutomations": "当日次数",
+      "plan": "当前套餐",
+      "nextPaymentDate": "下次付款时间",
+      "actions": "操作",
+      "times":"次",
+      "cycle":"订阅周期",
+      "debit_success":"扣款成功",
+      "debit_fail":"扣款失败",
+      "cancel_success":"订阅已经被取消",
+      "cancel_failed":"该订阅取消失败，请稍后重试",
+      "table": {
+        "invoice_id":"账单号",
+        "amount": "金额",
+        "status": "状态",
+        "paid_date": "付款日期",
+        "next_payment_date": "下一次扣款日期"
+      }
+    },
+    "transactions": {
+      "loading": "加载记录中...",
+      "noTransactions": "未找到交易记录。",
+      "table": {
+        "date": "日期",
+        "description": "描述",
+        "amount": "金额"
+      }
+    },
+    "apiKeys": {
+      "description": "添加您自己的 LLM API 密钥，用于替代官方 API。",
+      "source": {
+        "label": "API 来源",
+        "official": "官方 API",
+        "officialDesc": "使用 Useit 内置 API 密钥（消耗额度）",
+        "own": "自有 API 密钥",
+        "ownDesc": "使用您自己的 API 密钥（不消耗额度）"
+      },
+      "notSet": "尚未配置 API 密钥。",
+      "addKey": "添加 API 密钥",
+      "delete": "删除",
+      "provider": "提供商",
+      "apiKey": "API 密钥",
+      "placeholder": "输入您的 API 密钥",
+      "cancel": "取消",
+      "saveKey": "保存密钥",
+      "saving": "保存中...",
+      "securityNotice": "密钥通过 Supabase Vault 加密存储，保存后不会暴露给浏览器。"
+    },
+    "billing": {
+      "comingSoon": "账单管理功能即将推出"
+    }
+  }
+}
+

@@ -1,0 +1,35 @@
+{
+  "welcome": {
+    "subtitle": "AI Agent Workstation",
+    "description": "Welcome to UseIt Studio. Take 30 seconds to learn the interface layout and get the most out of your AI Agent workflows.",
+    "startTour": "Start Tour",
+    "skip": "Skip"
+  },
+  "steps": {
+    "leftPanel": {
+      "title": "Navigation & Panels",
+      "description": "The icon bar on the left switches between features — Files, Search, Workflows, Skills, Environments, API Keys, and Remote Control. The panel beside it shows the corresponding content."
+    },
+    "chatPanel": {
+      "title": "Command Center",
+      "description": "Talk to your Agent in natural language. Select agents, issue task commands, and debug results — this is where you'll spend most of your time."
+    },
+    "mainViewer": {
+      "title": "Main Canvas",
+      "description": "The Agent's workspace. Watch Computer Use actions in real-time, or visually orchestrate your workflows here."
+    },
+    "controlPanel": {
+      "title": "Environment & Config",
+      "description": "Manage Agent runtime environments (Local PC / VM), configure workflow node parameters, and monitor task execution."
+    },
+    "workTabs": {
+      "title": "Work Tabs",
+      "description": "Switch like browser tabs — open multiple workflows, VM screens, and file previews simultaneously."
+    }
+  },
+  "buttons": {
+    "next": "NEXT",
+    "prev": "PREV",
+    "done": "LAUNCH"
+  }
+}

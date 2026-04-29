@@ -1,0 +1,303 @@
+{
+  "layer_colors": {
+    "0": 7,
+    "Defpoints": 7,
+    "标注": 3,
+    "DXPM": 7,
+    "符号": 9,
+    "结构线": 4,
+    "填充": 9,
+    "断面标高标注": 3,
+    "桩号": 3,
+    "轴线": 9
+  },
+  "elements": {
+    "lines": [],
+    "circles": [],
+    "arcs": [],
+    "polylines": [
+      {
+        "vertices": [
+          [
+            77.97,
+            73.83
+          ],
+          [
+            77.97,
+            12.13
+          ]
+        ],
+        "closed": false,
+        "layer": "轴线",
+        "color": 256
+      },
+      {
+        "vertices": [
+          [
+            77.97,
+            35.5
+          ],
+          [
+            62.32,
+            32.17
+          ]
+        ],
+        "closed": false,
+        "layer": "标注",
+        "color": 256
+      },
+      {
+        "vertices": [
+          [
+            77.97,
+            35.5
+          ],
+          [
+            93.62,
+            32.17
+          ]
+        ],
+        "closed": false,
+        "layer": "标注",
+        "color": 256
+      },
+      {
+        "vertices": [
+          [
+            93.62,
+            32.17
+          ],
+          [
+            93.6,
+            48.26
+          ]
+        ],
+        "closed": false,
+        "layer": "标注",
+        "color": 256
+      },
+      {
+        "vertices": [
+          [
+            62.32,
+            32.17
+          ],
+          [
+            62.34,
+            50.21
+          ]
+        ],
+        "closed": false,
+        "layer": "标注",
+        "color": 256
+      },
+      {
+        "vertices": [
+          [
+            62.63,
+            33.46
+          ],
+          [
+            62.06,
+            30.69
+          ]
+        ],
+        "closed": false,
+        "layer": "标注",
+        "color": 256
+      }
+    ],
+    "texts": [
+      {
+        "text": "R400",
+        "position": [
+          65.28,
+          32.94,
+          0.0
+        ],
+        "height": 2.5,
+        "layer": "标注",
+        "color": 256
+      }
+    ],
+    "dimensions": [
+      {
+        "type": "AcDb2LineAngularDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 2.71,
+        "text_override": "156°",
+        "text_position": [
+          77.75,
+          30.91,
+          0.0
+        ],
+        "rotation": 0.0
+      },
+      {
+        "type": "AcDbAlignedDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 100.0,
+        "text_override": "",
+        "text_position": [
+          54.49,
+          35.25,
+          0.0
+        ],
+        "rotation": 0.0,
+        "ext_line1_point": [
+          61.49,
+          36.19,
+          0.0
+        ],
+        "ext_line2_point": [
+          57.61,
+          35.23,
+          0.0
+        ]
+      },
+      {
+        "type": "AcDbAlignedDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 120.0,
+        "text_override": "",
+        "text_position": [
+          100.13,
+          66.92,
+          0.0
+        ],
+        "rotation": 0.0,
+        "ext_line1_point": [
+          102.53,
+          56.52,
+          0.0
+        ],
+        "ext_line2_point": [
+          97.73,
+          56.52,
+          0.0
+        ]
+      },
+      {
+        "type": "AcDbAlignedDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 987.9,
+        "text_override": "",
+        "text_position": [
+          77.97,
+          65.19,
+          0.0
+        ],
+        "rotation": 0.0,
+        "ext_line1_point": [
+          97.73,
+          56.52,
+          0.0
+        ],
+        "ext_line2_point": [
+          58.21,
+          56.52,
+          0.0
+        ]
+      },
+      {
+        "type": "AcDbAlignedDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 100.0,
+        "text_override": "",
+        "text_position": [
+          105.51,
+          49.5,
+          0.0
+        ],
+        "rotation": 0.0,
+        "ext_line1_point": [
+          102.53,
+          51.5,
+          0.0
+        ],
+        "ext_line2_point": [
+          102.53,
+          47.5,
+          0.0
+        ]
+      },
+      {
+        "type": "AcDbAlignedDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 800.0,
+        "text_override": "",
+        "text_position": [
+          113.3,
+          35.5,
+          0.0
+        ],
+        "rotation": 0.0,
+        "ext_line1_point": [
+          102.53,
+          51.5,
+          0.0
+        ],
+        "ext_line2_point": [
+          102.53,
+          19.5,
+          0.0
+        ]
+      },
+      {
+        "type": "AcDbAlignedDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 120.0,
+        "text_override": "",
+        "text_position": [
+          55.81,
+          66.94,
+          0.0
+        ],
+        "rotation": 0.0,
+        "ext_line1_point": [
+          58.21,
+          56.52,
+          0.0
+        ],
+        "ext_line2_point": [
+          53.41,
+          56.52,
+          0.0
+        ]
+      },
+      {
+        "type": "AcDb2LineAngularDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 0.21,
+        "text_override": "",
+        "text_position": [
+          60.51,
+          49.61,
+          0.0
+        ],
+        "rotation": 0.0
+      },
+      {
+        "type": "AcDb2LineAngularDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 0.21,
+        "text_override": "",
+        "text_position": [
+          95.33,
+          47.49,
+          0.0
+        ],
+        "rotation": 0.0
+      }
+    ]
+  }
+}

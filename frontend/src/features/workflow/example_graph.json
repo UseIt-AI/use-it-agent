@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    {
+      "id": "start-1",
+      "type": "custom",
+      "data": {
+        "type": "start",
+        "title": "Start",
+        "desc": "",
+        "variables": [],
+        "selected": false
+      },
+      "position": { "x": 20, "y": 50 },
+      "positionAbsolute": { "x": 20, "y": 50 },
+      "sourcePosition": "right",
+      "width": 240,
+      "height": 48,
+      "selected": false
+    },
+    {
+      "id": "tool-1",
+      "type": "custom",
+      "data": {
+        "type": "tool-use",
+        "title": "Tool Use",
+        "desc": "",
+        "selected": false,
+        "instruction": "Summarize the user request and decide next step.",
+        "model": "gpt-4o-mini",
+        "tools": ["web_search"],
+        "toolSettings": {
+          "web_search": { "instructions": "Search the web and cite key sources." }
+        },
+        "outputFormat": "text"
+      },
+      "position": { "x": 320, "y": 50 },
+      "positionAbsolute": { "x": 320, "y": 50 },
+      "targetPosition": "left",
+      "sourcePosition": "right",
+      "width": 240,
+      "height": 160,
+      "selected": false
+    },
+    {
+      "id": "browser-1",
+      "type": "custom",
+      "data": {
+        "type": "browser-use",
+        "title": "Browser Use",
+        "desc": "",
+        "selected": false,
+        "query": "latest AutoCAD command reference"
+      },
+      "position": { "x": 620, "y": 50 },
+      "positionAbsolute": { "x": 620, "y": 50 },
+      "targetPosition": "left",
+      "sourcePosition": "right",
+      "width": 240,
+      "height": 160,
+      "selected": false
+    },
+    {
+      "id": "mcp-1",
+      "type": "custom",
+      "data": {
+        "type": "mcp-use",
+        "title": "MCP Use",
+        "desc": "",
+        "selected": false,
+        "human_task_query": "Run the selected MCP tool to fetch the needed data.",
+        "mcp_server_name": "excel_executor",
+        "mcp_function_info": ""
+      },
+      "position": { "x": 920, "y": 50 },
+      "positionAbsolute": { "x": 920, "y": 50 },
+      "targetPosition": "left",
+      "sourcePosition": "right",
+      "width": 240,
+      "height": 301,
+      "selected": false
+    },
+    {
+      "id": "end-1",
+      "type": "custom",
+      "data": {
+        "type": "end",
+        "title": "End",
+        "desc": "",
+        "outputs": [],
+        "selected": false
+      },
+      "position": { "x": 1220, "y": 50 },
+      "positionAbsolute": { "x": 1220, "y": 50 },
+      "targetPosition": "left",
+      "width": 240,
+      "height": 48,
+      "selected": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-start-tool",
+      "type": "custom",
+      "source": "start-1",
+      "target": "tool-1",
+      "sourceHandle": "source",
+      "targetHandle": "target",
+      "data": { "sourceType": "start", "targetType": "tool-use", "isInLoop": false },
+      "zIndex": 1
+    },
+    {
+      "id": "e-tool-browser",
+      "type": "custom",
+      "source": "tool-1",
+      "target": "browser-1",
+      "sourceHandle": "source",
+      "targetHandle": "target",
+      "data": { "sourceType": "tool-use", "targetType": "browser-use", "isInLoop": false },
+      "zIndex": 1
+    },
+    {
+      "id": "e-browser-mcp",
+      "type": "custom",
+      "source": "browser-1",
+      "target": "mcp-1",
+      "sourceHandle": "source",
+      "targetHandle": "target",
+      "data": { "sourceType": "browser-use", "targetType": "mcp-use", "isInLoop": false },
+      "zIndex": 1
+    },
+    {
+      "id": "e-mcp-end",
+      "type": "custom",
+      "source": "mcp-1",
+      "target": "end-1",
+      "sourceHandle": "source",
+      "targetHandle": "target",
+      "data": { "sourceType": "mcp-use", "targetType": "end", "isInLoop": false },
+      "zIndex": 1
+    }
+  ],
+  "viewport": { "x": 0, "y": 0, "zoom": 1 }
+}
+

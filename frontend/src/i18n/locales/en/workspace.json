@@ -1,0 +1,443 @@
+{
+  "workspace": {
+    "header": {
+      "home": "Home",
+      "switchProject": "Switch Project",
+      "newProject": "New Project",
+      "toggleDebugMode": "Toggle Debug Mode",
+      "collapseToSidebar": "Collapse to Sidebar",
+      "expandToWorkspace": "View Workflow",
+      "expandTooltip": "Manage Files, VMs & Workflows",
+      "guideTour": "Guide Tour",
+      "minimize": "Minimize",
+      "maximize": "Maximize",
+      "restore": "Restore",
+      "close": "Close",
+      "untitledProject": "Untitled Project",
+      "newChat": "New Chat",
+      "history": "History",
+      "localMachine": "Local Machine (This PC)"
+    },
+    "chat": {
+      "collapsePanel": "Collapse Chat Panel",
+      "expandPanel": "Expand Chat Panel",
+      "taskStoppedByUser": "Task stopped by user",
+      "loadingWorkflow": "Loading Workflow...",
+      "thinking": "Thinking...",
+      "planningNextMove": "Planning Next Move...",
+      "waitingForUserChoice": "Waiting for your choice...",
+      "inputPlaceholder": "Type a message...",
+      "selectAgent": "Select Agent",
+      "send": "Send",
+      "stop": "Stop",
+      "defaultWelcome": "Hello! Please select a workflow to start the conversation."
+    },
+    "upload": {
+      "title": "Uploading Files",
+      "titleFailed": "Upload Failed",
+      "subtitle": "{{uploaded}} of {{total}} files uploaded",
+      "subtitleError": "An error occurred during upload",
+      "errorDetails": "Error Details",
+      "currentlyUploading": "Currently uploading",
+      "files": "files",
+      "cancel": "Cancel",
+      "close": "Close",
+      "cancelUpload": "Cancel upload",
+      "successMessage": "Uploaded {{uploaded}}/{{total}} files",
+      "alreadyUpToDate": "Already up to date, no upload needed"
+    },
+    "uploadConfirm": {
+      "title": "Sync Confirmation",
+      "description": "You have deleted {{count}} files locally. Do you want to delete them from cloud as well?",
+      "hint": "These may be temporary files generated during runtime",
+      "local": "Local",
+      "cloud": "Cloud",
+      "localTitle": "Sync Deletion",
+      "localDesc": "Delete these files from cloud to match local",
+      "cloudTitle": "Keep in Cloud",
+      "cloudDesc": "Keep these files in cloud, only upload local files",
+      "filesWillDelete": "These files will be deleted from cloud ({{count}})",
+      "filesWillKeep": "These files will be kept in cloud ({{count}})",
+      "unknownFile": "Unknown file",
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    },
+    "sync": {
+      "title": "Syncing from Cloud",
+      "titleFailed": "Sync Failed",
+      "subtitle": "Syncing {{downloaded}} of {{total}} files",
+      "subtitleError": "An error occurred during sync",
+      "errorDetails": "Error Details",
+      "files": "files",
+      "cancel": "Cancel",
+      "close": "Close",
+      "cancelSync": "Cancel sync"
+    },
+    "explore":{
+      "title":"Use It",
+      "panelHint":"Provide the most concise and practical Chat workflow to help you quickly experience the magic of this product."
+    },
+    "fileExplorer": {
+      "title": "FILE EXPLORER",
+      "panelHint": "Upload and manage files shared with your Agent. Documents, images, and code placed here can be directly accessed during tasks.",
+      "addToWorkspace": "Click to select files, copy to workspace",
+      "addToWorkspaceTitle": "Click to select one or more files, copy to project workspace",
+      "copyingToWorkspace": "Copying…",
+      "dragHint": "Drag files here to copy to project workspace",
+      "skillsDragHint": "Drag skills here to copy to project workspace",
+      "dropToCopy": "Drop to copy to project workspace",
+      "unlockDialog": {
+        "title": "Unlock Confirmation",
+        "subtitle": "You are about to unlock a protected project item",
+        "file": "file",
+        "folder": "folder",
+        "warningTitle": "Warning",
+        "warningDescription": "After unlocking, this {{type}} can be edited, moved, or deleted.",
+        "folderWarningExtra": "Items inside the folder remain unchanged, but the folder itself will no longer be protected.",
+        "tipTitle": "Tip:",
+        "tipDescription": "Changing protected directory structures may cause some features to behave unexpectedly. Proceed carefully.",
+        "cancel": "Cancel",
+        "confirm": "Confirm Unlock"
+      },
+      "deleteFileTitle": "Delete file?",
+      "deleteFolderTitle": "Delete folder?",
+      "deleteMultiTitle": "Delete {{count}} items?",
+      "deleteDescription": "Are you sure you want to delete \"{{name}}\"? This action cannot be undone.",
+      "deleteMultiDescription": "Are you sure you want to delete {{count}} selected items? This action cannot be undone.",
+      "recycleBinTitle": "Are you sure you want to delete '{{name}}'?",
+      "recycleBinMultiTitle": "Are you sure you want to delete {{count}} items?",
+      "recycleBinDescription": "You can restore this item from the Recycle Bin.",
+      "recycleBinMultiDescription": "You can restore these items from the Recycle Bin.",
+      "moveToRecycleBin": "Move to Recycle Bin",
+      "deleteConfirm": "Delete",
+      "deleteCancel": "Cancel",
+      "error": {
+        "duplicateTitle": "Name already exists",
+        "duplicateDescription": "A file or folder with the same name already exists in this location. Please choose a different name.",
+        "operationFailed": "Operation failed",
+        "ok": "OK"
+      },
+      "contextMenu": {
+        "newFile": "New File",
+        "newFolder": "New Folder",
+        "importFiles": "Import Files...",
+        "rename": "Rename",
+        "copy": "Copy",
+        "cut": "Cut",
+        "paste": "Paste",
+        "addToChat": "Add to Chat",
+        "copyPath": "Copy Path",
+        "copyRelativePath": "Copy Relative Path",
+        "addSelectedToChat": "Add Selected to Chat",
+        "showInFolder": "Reveal in File Explorer",
+        "delete": "Delete"
+      }
+    },
+    "search": {
+      "title": "Search",
+      "panelHint": "Quickly find files in your workspace by name.",
+      "placeholder": "Search files...",
+      "results": "Search Results",
+      "noResults": "No matching files found",
+      "hint": "Enter a file name to search"
+    },
+    "skills": {
+      "title": "Skills",
+      "panelHint": "Browse and manage reusable skill modules. Skills let your Agent perform specialized tasks like web scraping, data processing, and more."
+    },
+    "workflow": {
+      "title": "Workflows",
+      "panelHint": "Create and manage automation workflows. Each workflow defines a sequence of steps your Agent executes to complete a task."
+    },
+    "vmInstall": {
+      "idle": {
+        "title": "Install Virtual Machine",
+        "subtitle": "Download Windows ISO and install automatically (~15-20 min)",
+        "setupSteps": "Setup Steps",
+        "step1": "Download Windows ISO",
+        "step1Desc": "Windows 10/11 x64 (not ARM). Official eval ISO, free 90 days.",
+        "step2": "Select the downloaded ISO file",
+        "step3": "Wait for automatic installation",
+        "selectIso": "Select ISO File",
+        "restoreTitle": "Restore from VM Folder",
+        "restoreDesc": "Import an existing Hyper-V VM folder and auto-load its checkpoints.",
+        "selectVmFolder": "Select VM Folder",
+        "envReady": "Virtual Machine Ready",
+        "envRequired": "Virtual Machine Setup Required"
+      },
+      "isoConfirm": {
+        "title": "Have you downloaded a Windows ISO?",
+        "subtitle": "You can use the Microsoft link or any other trusted source.",
+        "yesSelect": "Yes, select ISO file…",
+        "notYet": "Not yet, open download page",
+        "cancel": "Cancel"
+      },
+      "vmNameLabel": "VM Name",
+      "vmNameHint": "Use default or change it if needed.",
+      "config": {
+        "title": "Configure Installation",
+        "subtitle": "Review settings and start the installation",
+        "isoSelected": "ISO Selected",
+        "changeIso": "Change ISO →",
+        "installDir": "Install Directory",
+        "browse": "Browse",
+        "advancedSettings": "Advanced Settings",
+        "username": "Username:",
+        "password": "Password:",
+        "vncPort": "VNC Port:",
+        "startInstall": "Start Installation",
+        "freeSpace": "{{size}} GB available",
+        "needSpace": "at least {{size}} GB required"
+      },
+      "installing": {
+        "title": "Installing VM",
+        "subtitle": "This may take 15-20 minutes. You can continue using the app.",
+        "doNotClose": "Do not close the application during installation",
+        "stepOf": "Step {{current}} of {{total}}"
+      },
+      "complete": {
+        "title": "Installation Complete!",
+        "subtitle": "Your virtual machine is ready to use.",
+        "vmReady": "VM Ready",
+        "clickConnect": "Click to connect and start using your virtual machine.",
+        "connectNow": "Connect Now"
+      },
+      "error": {
+        "title": "Installation Failed",
+        "subtitle": "Something went wrong during installation.",
+        "details": "Error Details",
+        "tryAgain": "Try Again",
+        "installFailed": "Installation failed",
+        "selectIso": "Please select a Windows ISO file",
+        "restoreFailed": "Restore failed"
+      },
+      "restore": {
+        "importing": "Importing VM from selected folder...",
+        "completedDiskFallback": "Restore completed from disk chain. Checkpoint tree metadata may not be available.",
+        "completedWithCheckpoints": "Restore completed. Loaded {{count}} checkpoints.",
+        "completed": "Restore completed."
+      }
+    },
+    "vmConnect": {
+      "checking": {
+        "title": "Checking Environment",
+        "subtitle": "Verifying virtual machine configuration...",
+        "pleaseWait": "Please wait..."
+      },
+      "unsupported": {
+        "title": "Virtual Machine Unsupported",
+        "subtitle": "Your current Windows edition does not support local virtual machines.",
+        "requirePro": "Windows Pro/Enterprise required",
+        "requireProDesc": "Local virtual machines require a supported Windows edition (Pro, Enterprise, or Education)."
+      },
+      "recheckEnvironment": "Recheck Environment",
+      "noHyperV": {
+        "title": "Virtual Machine Feature Disabled",
+        "subtitle": "Please enable virtual machine feature in Windows Features",
+        "enableTitle": "Enable Virtual Machine Feature",
+        "enableDesc": "To use local VM, you need to enable virtual machine feature in Windows Features. This requires a system restart.",
+        "enableButton": "Enable Virtual Machine",
+        "enableFailed": "Failed to enable virtual machine feature. Please approve the admin prompt or enable it manually in Windows Features.",
+        "enableNeedsReboot": "Virtual machine feature was enabled. Please restart Windows, then click Recheck Environment.",
+        "enableSuccess": "Virtual machine feature was enabled successfully. Rechecking environment...",
+        "enableRetryFailed": "Failed to enable virtual machine feature. Please try again with administrator approval."
+      },
+      "permission": {
+        "title": "Permission Required",
+        "subtitle": "Administrator permission is required to manage virtual machines.",
+        "fixTitle": "One-click permission fix",
+        "fixDesc": "We will ask Windows for admin approval once, add your account to the required system group, then you need to sign out and sign back in.",
+        "fixButton": "Fix Permission"
+      },
+      "connect": {
+        "title": "Connect to Desktop",
+        "subtitle": "Start your virtual machine and connect",
+        "permissionRequired": "Permission Required",
+        "permissionDesc": "Virtual machine administrator permission is required. You need to sign out and sign back in after fixing.",
+        "fixPermission": "Fix Permission",
+        "vmSettings": "VM Settings",
+        "vmNameLabel": "VM Name",
+        "osPasswordLabel": "OS Login Password",
+        "quickConnect": "Quick Connect",
+        "checking": "Checking..."
+      },
+      "sanitizedError": "Failed to run virtual machine command. Please use \"Fix Permission\" or recheck your VM environment.",
+      "agent": {
+        "required": "UseIt Agent Required",
+        "updateAvailable": "Agent Update Available",
+        "requiredDesc": "Required for AI control features",
+        "versionAvailable": "v{{version}} available",
+        "install": "Install",
+        "update": "Update",
+        "installing": "Installing Agent...",
+        "installFailed": "Agent Installation Failed",
+        "retry": "Retry"
+      },
+      "steps": {
+        "idle": "Ready",
+        "checking": "Checking VM status...",
+        "starting": "Starting virtual machine...",
+        "waitingIp": "Waiting for IP address...",
+        "connecting": "Connecting to VNC...",
+        "connected": "Connected",
+        "error": "Connection failed"
+      },
+      "remote": {
+        "ipAddress": "IP Address *",
+        "ipPlaceholder": "192.168.x.x or public IP",
+        "username": "Username (Optional)",
+        "usernamePlaceholder": "Login username",
+        "advancedSettings": "Advanced Settings",
+        "vncPassword": "VNC Password",
+        "osPassword": "OS Login Password",
+        "vncPort": "VNC Port",
+        "wsPort": "WS Port",
+        "connect": "Connect"
+      }
+    },
+    "environment": {
+      "title": "Agent Environment",
+      "panelHint": "View and manage your Agent's runtime environments — local machine or virtual machines. Connect, monitor status, and switch between targets.",
+      "actions": {
+        "addVm": "Add VM",
+        "exportVm": "Export VM (.vmcx)",
+        "browse": "Browse",
+        "deleteVm": "Delete VM",
+        "deleteFromHardware": "Delete from hardware",
+        "deleteFromSoftware": "Delete software only",
+        "cancel": "Cancel",
+        "ok": "OK"
+      },
+      "exportDialog": {
+        "title": "Export \"{{name}}\"",
+        "description": "Choose an export path and keep this dialog open while exporting.",
+        "saving": "Exporting VM..."
+      },
+      "deleteDialog": {
+        "title": "Delete \"{{name}}\"",
+        "description": "Choose how to delete this VM environment."
+      },
+      "notices": {
+        "title": "Environment Action",
+        "exportSuccess": "VM exported successfully to: {{path}}"
+      },
+      "errors": {
+        "deleteFailed": "Failed to delete VM environment",
+        "exportFailed": "Failed to export VM",
+        "exportPathRequired": "Please provide an export path"
+      }
+    },
+    "project": {
+      "title": "Project",
+      "panelHint": "Create, switch, and manage your projects. Select a project to open its workspace, or start a new one."
+    },
+    "api": {
+      "title": "API Providers",
+      "panelHint": "Configure API keys for LLM providers. Your Agent needs these to communicate with AI models."
+    },
+    "remote": {
+      "title": "Remote Control",
+      "panelHint": "Control your Agent from another device. Scan the QR code or enter the URL on your phone to send commands remotely."
+    },
+    "team": {
+      "title": "Team",
+      "panelHint": "Collaborate with your team members. Share projects, workflows, and resources."
+    },
+    "snapshots": {
+      "title": "Snapshots",
+      "placeholder": "Snapshot name (optional)",
+      "loading": "Loading snapshots...",
+      "empty": "No snapshots yet",
+      "tabs": {
+        "monitor": "Monitor",
+        "settings": "Settings",
+        "snapshots": "Snapshots"
+      },
+      "mode": {
+        "saveState": "Save state",
+        "noSaveState": "No state"
+      },
+      "node": {
+        "state": "State",
+        "noState": "No state",
+        "current": "Current"
+      },
+      "actions": {
+        "refresh": "Refresh snapshots",
+        "create": "Create",
+        "restore": "Restore",
+        "restoring": "Restoring...",
+        "restoreConfirm": "Restore to snapshot \"{{name}}\"? This will revert the VM."
+      },
+      "errors": {
+        "loadFailed": "Failed to load snapshots",
+        "createFailed": "Failed to create snapshot",
+        "restoreFailed": "Failed to restore snapshot",
+        "apiNotAvailable": "Snapshot API is not available yet. Please restart the desktop app."
+      }
+    }
+  },
+  "membership": {
+    "backToPlan": "Back to Plans",
+    "selectPlan": "Choose Your Plan",
+    "manageSubscription": "Manage your subscription",
+    "settings": "Settings",
+    "recommend": "Recommended",
+    "perMonth": "/mo",
+    "validity": "Valid for 1 month",
+    "currentPlan": "Current Plan",
+    "subscribe": "Subscribe",
+    "subscribe_success":"Subscription successful",
+    "plans": {
+      "free": {
+        "title": "Free",
+        "features": ["2,000 credits/month", "3 automations/day"]
+      },
+      "pro": {
+        "title": "Pro",
+        "features": ["15,000 credits/month", "15 automations/day", "Priority during peak hours", "Custom model API support", "Explore projects, tasks & custom GPT"]
+      },
+      "enterprise": {
+        "title": "Max",
+        "features": ["50,000 credits/month", "50 automations/day", "Priority during peak hours", "Custom model API support", "Explore projects, tasks & custom GPT", "Planning & task assistance", "Handle large projects with ease"]
+      }
+    },
+    "payment": {
+      "title": "Payment Method",
+      "cardNumber": "Card Number",
+      "expirationDate": "Expiration Date",
+      "cvv": "Security Code",
+      "billingAddress": "Billing Address",
+      "fullName": "Full Name",
+      "country": "Country",
+      "zip": "ZIP Code",
+      "planSuffix": "Plan",
+      "popularFeatures": "Popular Features",
+      "subscriptionType": "Subscription Type",
+      "monthly": "Monthly",
+      "originalPrice": "Original Price",
+      "totalDue": "Total Due Today",
+      "subscribeButton": "Subscribe",
+      "subscribeSuccess": "Subscription successful",
+      "error": "Payment failed, please try again"
+    }
+  },
+  "deploy": {
+    "checkingFiles": "Checking service files...",
+    "checkingVm": "Checking VM status...",
+    "creatingDirs": "Creating install directories...",
+    "enablingGuestService": "Enabling Guest Service Interface...",
+    "deploying": "Deploying {{serviceName}}...",
+    "preparingArchive": "{{serviceName}}: Preparing archive...",
+    "preparingTransfer": "{{serviceName}}: Preparing transfer...",
+    "transferring": "{{serviceName}}: Transferring to VM...",
+    "extracting": "{{serviceName}}: Extracting and installing...",
+    "configuringFirewall": "Configuring firewall rules...",
+    "registeringServices": "Registering services...",
+    "startingServices": "Starting services...",
+    "complete": "Service deployment complete!",
+    "failed": "Deployment failed",
+    "pleaseWait": "Please wait..."
+  }
+}
+

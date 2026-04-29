@@ -1,0 +1,100 @@
+{
+  "template_info": {
+    "name": "default",
+    "description": "默认模板 - 包含所有基本元素类型的示例，用于自由绘图",
+    "version": "1.0",
+    "usage": "当用户需要从头绘制自定义图形时使用此模板，AI 应该完全替换模板内容"
+  },
+  "element_types": {
+    "lines": {
+      "description": "直线",
+      "required_fields": ["start", "end", "layer"],
+      "optional_fields": ["color", "comment"],
+      "example": {
+        "start": [0.0, 0.0, 0.0],
+        "end": [100.0, 0.0, 0.0],
+        "layer": "结构线",
+        "color": 256
+      }
+    },
+    "circles": {
+      "description": "圆",
+      "required_fields": ["center", "radius", "layer"],
+      "optional_fields": ["color", "comment"],
+      "example": {
+        "center": [50.0, 30.0, 0.0],
+        "radius": 15.0,
+        "layer": "结构线",
+        "color": 256
+      }
+    },
+    "arcs": {
+      "description": "圆弧",
+      "required_fields": ["center", "radius", "start_angle", "end_angle", "layer"],
+      "optional_fields": ["color", "comment"],
+      "note": "角度单位为度数，0度为X轴正方向，逆时针为正",
+      "example": {
+        "center": [0.0, 0.0, 0.0],
+        "radius": 10.0,
+        "start_angle": 0,
+        "end_angle": 90,
+        "layer": "结构线",
+        "color": 256
+      }
+    },
+    "polylines": {
+      "description": "多段线",
+      "required_fields": ["vertices", "closed", "layer"],
+      "optional_fields": ["color", "comment"],
+      "note": "vertices 是二维坐标数组 [[x1,y1], [x2,y2], ...]，closed 为 true 时自动闭合",
+      "example": {
+        "vertices": [[0.0, 0.0], [10.0, 0.0], [10.0, 10.0], [0.0, 10.0]],
+        "closed": true,
+        "layer": "结构线",
+        "color": 256
+      }
+    },
+    "texts": {
+      "description": "文字",
+      "required_fields": ["text", "position", "height", "layer"],
+      "optional_fields": ["color", "rotation", "comment"],
+      "example": {
+        "text": "示例文字",
+        "position": [50.0, 50.0, 0.0],
+        "height": 3.0,
+        "layer": "文字",
+        "color": 256
+      }
+    },
+    "dimensions": {
+      "description": "标注",
+      "required_fields": ["type", "layer", "measurement", "ext_line1_point", "ext_line2_point"],
+      "optional_fields": ["color", "text_override", "text_position", "rotation", "comment"],
+      "supported_types": ["AcDbAlignedDimension", "AcDbRotatedDimension", "AcDb2LineAngularDimension"],
+      "example": {
+        "type": "AcDbAlignedDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 100.0,
+        "text_override": "",
+        "ext_line1_point": [0.0, 0.0, 0.0],
+        "ext_line2_point": [100.0, 0.0, 0.0]
+      }
+    }
+  },
+  "layer_colors": {
+    "description": "图层颜色定义，值为 AutoCAD 颜色索引 (1-255)",
+    "common_colors": {
+      "1": "红色",
+      "2": "黄色",
+      "3": "绿色",
+      "4": "青色",
+      "5": "蓝色",
+      "6": "洋红",
+      "7": "白色/黑色",
+      "8": "灰色",
+      "256": "ByLayer (使用图层颜色)"
+    }
+  }
+}
+
