@@ -52,6 +52,18 @@ Prompting is only the beginning; the goal is to help AI work inside the actual c
 - **Fast native control**: Uses structured interfaces like Windows COM, app APIs, scripts, and plugins instead of relying only on slow mouse-and-keyboard automation.
 - **Collaborative and extensible**: Keeps humans in the loop while connecting to more agents, tools, APIs, and skills.
 
+<br />
+
+<p align="center">
+  <img src="assets/manta_star_us.gif" alt="Give Manta-It Agent a star" width="300" />
+</p>
+
+<p align="center">
+  <strong>If this resonates with you, give us a star and help more builders discover Use-It Agent.</strong>
+</p>
+
+<br />
+
 ## <img src="assets/manta_shocked.png" alt="Architecture" width="44" /> Architecture
 
 <p align="center">
