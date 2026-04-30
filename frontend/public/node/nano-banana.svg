@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Banana body -->
+  <path d="M5.5 19.5C3.5 17.5 3 14 4.5 10.5C6 7 9 4 12.5 3.5C14 3.3 15.5 3.8 16.5 4.5C17 5 17 5.5 16.5 6C14 8 11 11 9.5 14.5C8 18 8 20 8.5 21C8.7 21.4 8.3 21.8 7.8 21.7C6.8 21.5 6.3 20.3 5.5 19.5Z" fill="#FFE135" stroke="#D4A017" stroke-width="1"/>
+  <!-- Banana tip -->
+  <path d="M16.5 4.5C17.5 3.5 18.5 3.2 19.5 3.5C20 3.7 20.2 4 20 4.5C19.5 5.5 18 6 16.5 6" fill="#8B7355" stroke="#6B5344" stroke-width="0.5"/>
+  <!-- Banana highlight -->
+  <path d="M7 12C9 9 11.5 6.5 14 5" stroke="#FFF8DC" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+</svg>

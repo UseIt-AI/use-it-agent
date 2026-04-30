@@ -1,0 +1,122 @@
+{
+  "settings": {
+    "title": "Settings",
+    "tabs": {
+      "account": "Account",
+      "general": "General",
+      "apikeys": "API Keys",
+      "api": "API Providers",
+      "team": "Team",
+      "subscription":"Subscription",
+      "transactions": "Transactions",
+      "billing": "Billing"
+    },
+    "team": {
+      "title": "Team",
+      "comingSoon": "Team collaboration is coming soon."
+    },
+    "account": {
+      "subscription": {
+        "currentPlan": "Current Plan",
+        "freePlan": "Free Plan",
+        "proMember": "Pro Member",
+        "active": "ACTIVE",
+        "upgradeToPro": "Upgrade to Pro"
+      },
+      "profilePicture": {
+        "label": "Profile Picture",
+        "upload": "Upload Image",
+        "remove": "Remove",
+        "recommendation": "Recommended: 256x256px • JPG/PNG/WebP"
+      },
+      "displayName": {
+        "label": "Display Name",
+        "placeholder": "Enter your display name",
+        "hint": "This name will be visible to your team members."
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "save": "Save Changes"
+      }
+    },
+    "general": {
+      "appearance": {
+        "label": "Appearance",
+        "description": "Choose your preferred theme interface.",
+        "options": {
+          "light": "Light",
+          "dark": "Dark (Coming Soon)",
+          "system": "System (Coming Soon)"
+        }
+      },
+      "language": {
+        "label": "Language",
+        "description": "Select display language.",
+        "options": {
+          "en": "English",
+          "zh": "Chinese (Coming Soon)"
+        }
+      },
+      "voiceMode": {
+        "label": "Voice Mode",
+        "description": "Standalone full-screen voice."
+      }
+    },
+    "subscription":{
+      "loading": "Loading history...",
+      "noData": "No subscription found.",
+      "unsubscribe":"Unsubscribe",
+      "rules":"View the credit rules",
+      "credits": "Current Credits",
+      "dailyAutomations": "Daily Automations",
+      "plan": "Current Plan",
+      "nextPaymentDate": "Next Payment Date",
+      "actions": "Actions",
+      "times":"Times",
+      "cycle":"Subscription Cycle",
+      "debit_success":"Success",
+      "debit_fail":"Fail",
+      "cancel_success":"The subscription has been cancelled",
+      "cancel_failed":"The subscription cancellation exception, please try it agin later.",
+      "table": {
+        "invoice_id":"Invoice No.",
+        "amount": "Amount",
+        "status": "Status",
+        "paid_date": "Paid Date"
+      }
+    },
+    "transactions": {
+      "loading": "Loading history...",
+      "noTransactions": "No transactions found.",
+      "table": {
+        "date": "Date",
+        "description": "Description",
+        "amount": "Amount"
+      }
+    },
+    "apiKeys": {
+      "description": "Add your own LLM API keys to use instead of the official API.",
+      "source": {
+        "label": "API Source",
+        "official": "Official API",
+        "officialDesc": "Use Useit's built-in API keys (credits required)",
+        "own": "Own API Key",
+        "ownDesc": "Use your own API keys (no credits consumed)"
+      },
+      "notSet": "No API keys configured yet.",
+      "addKey": "Add API Key",
+      "delete": "Delete",
+      "provider": "Provider",
+      "apiKey": "API Key",
+      "placeholder": "Enter your API key",
+      "cancel": "Cancel",
+      "saveKey": "Save Key",
+      "saving": "Saving...",
+      "securityNotice": "Keys are encrypted via Supabase Vault and never exposed to the browser after saving."
+    },
+    "billing": {
+      "comingSoon": "Billing management coming soon"
+    }
+  }
+}
+

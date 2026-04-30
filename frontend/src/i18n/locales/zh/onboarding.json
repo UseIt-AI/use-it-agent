@@ -1,0 +1,35 @@
+{
+  "welcome": {
+    "subtitle": "AI Agent 工作站",
+    "description": "欢迎使用 UseIt Studio。花 30 秒快速了解界面布局，帮助你更高效地使用 AI Agent 完成工作。",
+    "startTour": "开始引导",
+    "skip": "跳过"
+  },
+  "steps": {
+    "leftPanel": {
+      "title": "导航与功能面板",
+      "description": "左侧图标栏切换不同功能 —— 文件管理、搜索、工作流、技能库、运行环境、API 密钥和远程控制。右侧展开对应的操作面板。"
+    },
+    "chatPanel": {
+      "title": "指令中心",
+      "description": "用自然语言与 Agent 对话。选择 Agent、下达任务指令、调试运行结果，这是你最常使用的区域。"
+    },
+    "mainViewer": {
+      "title": "主画布",
+      "description": "Agent 的工作舞台。实时观看 Computer Use 操作画面，或在这里可视化编排工作流。"
+    },
+    "controlPanel": {
+      "title": "环境与配置",
+      "description": "管理 Agent 的运行环境（本机 / 虚拟机），配置工作流节点参数，监控任务执行状态。"
+    },
+    "workTabs": {
+      "title": "工作标签",
+      "description": "像浏览器标签页一样切换 —— 同时打开多个工作流、虚拟机画面和文件预览。"
+    }
+  },
+  "buttons": {
+    "next": "下一步",
+    "prev": "上一步",
+    "done": "开始体验"
+  }
+}

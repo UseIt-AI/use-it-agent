@@ -1,0 +1,61 @@
+# Dependencies & Build
+**/node_modules/
+**/dist/
+**/build/
+**/.next/
+**/.build_env/
+**/resources/services/
+**/resources/bin/
+**/release/
+
+# Python
+**/__pycache__/
+**.pyc
+**/.ipynb_checkpoints/
+
+# Logs
+**/logs/
+**/.logs/
+**/.cua_logs/
+
+# Cache
+**/.cache/
+**/.pathway_cache/
+**/.pathway_cache_useit_logs/
+**/.caption_cache/
+**/.embedding_cache/
+**/.rag_cache/
+
+# IDE & Environment
+.vscode/
+**/.env
+
+# Data & Output
+**/data/
+**/output/
+**/test_output
+**/downloaded_files/
+dev-app-update.yml
+CLAUDE.md
+AGENTS.md
+
+# Binary & Compressed Files
+*.exe
+*.zip
+*.iso
+*.png
+# *.json
+*.txt
+
+# Project Specific / Ignored Modules
+useit_agent/
+useit_data_collector/
+demo_parser/
+sam2/
+**/deprecated/
+**/.projects/
+
+# Temporary / Test Files
+**/test_space
+local_engine/controllers/excel/preliminary_engineering_calculations/conv_his*
+local_engine/controllers/excel/preliminary_engineering_calculations/test_space

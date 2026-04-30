@@ -1,0 +1,23 @@
+{
+  "design_station": "K0+200",
+  "scale": "1:25",
+  "total_depth_h": 800,
+  "top_width_total": "987.9 + 120 + 120",
+  "channel_top_width_internal": 987.9,
+  "bank_width_left": 120,
+  "bank_width_right": 120,
+  "inner_slope_ratio": "1:1",
+  "outer_slope_ratio": "1:1.5",
+  "channel_lining_thickness": null,
+  "channel_bottom_radius_r": 400,
+  "channel_material_lining": null,
+  "channel_material_filling": null,
+  "design_elevations": {
+    "channel_top_elevation": 1668.8,
+    "ground_surface_elevation": 1668.3,
+    "design_water_level": 1668.4,
+    "channel_bottom_elevation": 1668.0
+  },
+  "dimensions_unit": "mm",
+  "elevation_unit": "m"
+}

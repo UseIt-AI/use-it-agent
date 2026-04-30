@@ -1,0 +1,35 @@
+{
+  "mobile": {
+    "computerSelector": {
+      "loading": "加载中...",
+      "selectComputer": "选择电脑",
+      "noComputers": "暂无可用电脑",
+      "manageEnvironment": "管理环境",
+      "testConnection": "测试连接",
+      "testing": "测试中...",
+      "testSuccess": "连接成功",
+      "testFailed": "连接失败",
+      "lastTested": "上次测试",
+      "notTested": "未测试",
+      "status": {
+        "online": "在线",
+        "offline": "离线",
+        "busy": "忙碌",
+        "unknown": "未知"
+      }
+    },
+    "header": {
+      "back": "返回",
+      "logout": "退出"
+    },
+    "chat": {
+      "inputPlaceholder": "输入消息...",
+      "send": "发送",
+      "stop": "停止",
+      "selectAgent": "选择 Agent"
+    },
+    "status": {
+      "pcOffline": "PC 离线，请确保电脑上的 UseIt Studio 正在运行"
+    }
+  }
+}

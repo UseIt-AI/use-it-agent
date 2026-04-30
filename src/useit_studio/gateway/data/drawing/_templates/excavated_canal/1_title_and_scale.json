@@ -1,0 +1,76 @@
+{
+  "layer_colors": {
+    "0": 7,
+    "Defpoints": 7,
+    "标注": 3,
+    "DXPM": 7,
+    "符号": 9,
+    "结构线": 4,
+    "填充": 9,
+    "断面标高标注": 3,
+    "桩号": 3,
+    "轴线": 9
+  },
+  "elements": {
+    "lines": [],
+    "circles": [],
+    "arcs": [],
+    "polylines": [
+      {
+        "vertices": [
+          [
+            65.51,
+            80.36
+          ],
+          [
+            89.85,
+            80.36
+          ]
+        ],
+        "closed": false,
+        "layer": "桩号",
+        "color": 9
+      },
+      {
+        "vertices": [
+          [
+            65.51,
+            79.73
+          ],
+          [
+            89.85,
+            79.73
+          ]
+        ],
+        "closed": false,
+        "layer": "桩号",
+        "color": 9
+      }
+    ],
+    "texts": [
+      {
+        "text": "K0+010",
+        "position": [
+          68.44,
+          82.05,
+          0.0
+        ],
+        "height": 4.0,
+        "layer": "桩号",
+        "color": 256
+      },
+      {
+        "text": "1:25",
+        "position": [
+          83.13,
+          74.54,
+          0.0
+        ],
+        "height": 3.2,
+        "layer": "桩号",
+        "color": 256
+      }
+    ],
+    "dimensions": []
+  }
+}

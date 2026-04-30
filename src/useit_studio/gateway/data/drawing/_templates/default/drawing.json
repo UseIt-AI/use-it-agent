@@ -1,0 +1,199 @@
+{
+  "layer_colors": {
+    "0": 7,
+    "结构线": 4,
+    "标注": 3,
+    "文字": 2,
+    "辅助线": 8
+  },
+  "elements": {
+    "lines": [
+      {
+        "start": [0.0, 0.0, 0.0],
+        "end": [100.0, 0.0, 0.0],
+        "layer": "结构线",
+        "color": 256,
+        "comment": "底边水平线"
+      },
+      {
+        "start": [100.0, 0.0, 0.0],
+        "end": [100.0, 60.0, 0.0],
+        "layer": "结构线",
+        "color": 256,
+        "comment": "右边垂直线"
+      },
+      {
+        "start": [100.0, 60.0, 0.0],
+        "end": [0.0, 60.0, 0.0],
+        "layer": "结构线",
+        "color": 256,
+        "comment": "顶边水平线"
+      },
+      {
+        "start": [0.0, 60.0, 0.0],
+        "end": [0.0, 0.0, 0.0],
+        "layer": "结构线",
+        "color": 256,
+        "comment": "左边垂直线"
+      },
+      {
+        "start": [0.0, 0.0, 0.0],
+        "end": [100.0, 60.0, 0.0],
+        "layer": "辅助线",
+        "color": 8,
+        "comment": "对角线1"
+      },
+      {
+        "start": [100.0, 0.0, 0.0],
+        "end": [0.0, 60.0, 0.0],
+        "layer": "辅助线",
+        "color": 8,
+        "comment": "对角线2"
+      }
+    ],
+    "circles": [
+      {
+        "center": [50.0, 30.0, 0.0],
+        "radius": 15.0,
+        "layer": "结构线",
+        "color": 256,
+        "comment": "中心圆"
+      },
+      {
+        "center": [50.0, 30.0, 0.0],
+        "radius": 20.0,
+        "layer": "辅助线",
+        "color": 8,
+        "comment": "外圈辅助圆"
+      }
+    ],
+    "arcs": [
+      {
+        "center": [0.0, 0.0, 0.0],
+        "radius": 10.0,
+        "start_angle": 0,
+        "end_angle": 90,
+        "layer": "结构线",
+        "color": 256,
+        "comment": "左下角圆弧"
+      },
+      {
+        "center": [100.0, 60.0, 0.0],
+        "radius": 10.0,
+        "start_angle": 180,
+        "end_angle": 270,
+        "layer": "结构线",
+        "color": 256,
+        "comment": "右上角圆弧"
+      }
+    ],
+    "polylines": [
+      {
+        "vertices": [
+          [20.0, 10.0],
+          [30.0, 20.0],
+          [40.0, 10.0],
+          [50.0, 20.0]
+        ],
+        "closed": false,
+        "layer": "结构线",
+        "color": 256,
+        "comment": "开放折线（锯齿形）"
+      },
+      {
+        "vertices": [
+          [60.0, 10.0],
+          [80.0, 10.0],
+          [80.0, 25.0],
+          [60.0, 25.0]
+        ],
+        "closed": true,
+        "layer": "结构线",
+        "color": 4,
+        "comment": "闭合矩形多段线"
+      },
+      {
+        "vertices": [
+          [20.0, 40.0],
+          [25.0, 50.0],
+          [35.0, 50.0],
+          [40.0, 40.0],
+          [30.0, 35.0]
+        ],
+        "closed": true,
+        "layer": "结构线",
+        "color": 256,
+        "comment": "闭合五边形"
+      }
+    ],
+    "texts": [
+      {
+        "text": "示例图纸",
+        "position": [35.0, 70.0, 0.0],
+        "height": 5.0,
+        "layer": "文字",
+        "color": 256,
+        "comment": "标题文字"
+      },
+      {
+        "text": "宽度=100",
+        "position": [40.0, -8.0, 0.0],
+        "height": 3.0,
+        "layer": "标注",
+        "color": 3,
+        "comment": "宽度标注文字"
+      },
+      {
+        "text": "高度=60",
+        "position": [105.0, 25.0, 0.0],
+        "height": 3.0,
+        "layer": "标注",
+        "color": 3,
+        "comment": "高度标注文字"
+      },
+      {
+        "text": "R15",
+        "position": [55.0, 30.0, 0.0],
+        "height": 2.5,
+        "layer": "标注",
+        "color": 256,
+        "comment": "半径标注"
+      },
+      {
+        "text": "比例 1:10",
+        "position": [70.0, -15.0, 0.0],
+        "height": 2.5,
+        "layer": "文字",
+        "color": 256,
+        "comment": "比例说明"
+      }
+    ],
+    "dimensions": [
+      {
+        "type": "AcDbAlignedDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 100.0,
+        "text_override": "",
+        "text_position": [50.0, -5.0, 0.0],
+        "rotation": 0.0,
+        "ext_line1_point": [0.0, 0.0, 0.0],
+        "ext_line2_point": [100.0, 0.0, 0.0],
+        "comment": "底边长度标注"
+      },
+      {
+        "type": "AcDbAlignedDimension",
+        "layer": "标注",
+        "color": 256,
+        "measurement": 60.0,
+        "text_override": "",
+        "text_position": [108.0, 30.0, 0.0],
+        "rotation": 0.0,
+        "ext_line1_point": [100.0, 0.0, 0.0],
+        "ext_line2_point": [100.0, 60.0, 0.0],
+        "comment": "右边高度标注"
+      }
+    ]
+  }
+}
+

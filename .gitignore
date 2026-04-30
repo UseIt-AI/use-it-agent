@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+
+# Env / secrets
+.env
+.env.local
+*.pem
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & runtime
+logs/
+*.log
+/tmp/
+
+# Backend projects dir (local)
+backend/.projects/
+src/useit_studio/gateway/.projects/
+
+# Agent / agent logs (common paths)
+**/logs/
+
+# frontend — Node / Electron（canonical: frontend/）
+frontend/node_modules/
+frontend/dist/
+frontend/release/
+frontend/out/
+*.tsbuildinfo
+frontend/.vite/
+frontend/coverage/

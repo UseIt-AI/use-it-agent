@@ -94,6 +94,109 @@ This is what we mean by a *Computer Use Agent for professional software*: an age
 
 ## <img src="assets/manta_slide.png" alt="Install Quick Start" width="44" /> Install Quick Start
 
+> Developer-focused: run Use-It Agent locally (Backend + AI_Run + Frontend/Electron).
+
+### 1) Prerequisites
+
+| Requirement | Version | Notes |
+|---|---|---|
+| Python | `3.11+` | Required |
+| Node.js | `18+` LTS | Required for frontend |
+| npm | `9+` | Required for frontend |
+| Windows | any | Required for local-engine features (Office, AutoCAD, etc.) |
+
+### 2) Clone the repository
+
+```bash
+git clone https://github.com/UseIt-AI/OpenCreativeWork.git
+cd OpenCreativeWork
+```
+
+### 3) Install backend dependencies
+
+Create and activate a virtual environment, then install:
+
+```bash
+python -m venv .venv
+
+# macOS / Linux
+source .venv/bin/activate
+# Windows PowerShell
+# .venv\Scripts\Activate.ps1
+
+# Full install (agent + local-engine + dev tools)
+pip install -e ".[agent,local-engine,dev]"
+```
+
+> **macOS / Linux users**: The `local-engine` extras include Windows-only packages (`pywin32`, `uiautomation`, etc.). Install only what you need:
+> ```bash
+> pip install -e ".[agent,dev]"
+> ```
+
+### 4) Configure environment
+
+Copy the example env file and add your API key:
+
+```bash
+cp env.example .env
+```
+
+Open `.env` and set at least one LLM provider key.
+
+```bash
+# Google Gemini
+GOOGLE_API_KEY=...
+```
+
+To change the default model or provider, edit `config/llm_config.json`. The `"default"` entry controls which model the agent uses unless otherwise specified.
+
+### 5) Start the backend
+
+Default port is `8001`. Start the unified server:
+
+```bash
+useit-unified
+# or equivalently
+python -m useit_studio.gateway.unified_main
+```
+
+You should see the server start on `http://0.0.0.0:8001`. Verify with:
+
+```bash
+curl http://127.0.0.1:8001/health
+```
+
+### 6) Start the frontend (Electron)
+
+In a new terminal, from the repo root:
+
+```bash
+cd frontend
+npm install
+echo "VITE_API_URL=http://127.0.0.1:8001" > .env.local
+npm run dev
+```
+
+`npm run dev` launches both the Vite dev server (port `3000`) and Electron together.
+
+### 7) Ports at a glance
+
+| Service | URL |
+|---|---|
+| Backend API | `http://127.0.0.1:8001` |
+| Backend health | `http://127.0.0.1:8001/health` |
+| Frontend Vite dev | `http://127.0.0.1:3000` |
+
+### 8) Troubleshooting
+
+| Symptom | Fix |
+|---|---|
+| Frontend cannot connect to backend | Check that `VITE_API_URL` in `frontend/.env.local` matches the backend port (`8001` by default) |
+| `AI_Run` not mounted / agent not responding | Confirm `.[agent]` extras are installed; check that at least one LLM API key is set in `.env` |
+| `useit-unified` command not found | Make sure your virtual environment is activated and you ran `pip install -e ".[agent,...]"` |
+| Local-engine features unavailable | These require Windows with the target professional software installed (Office, AutoCAD, etc.) |
+| `pywin32` install fails on macOS/Linux | Use `pip install -e ".[agent,dev]"` instead to skip Windows-only packages |
+
 ## <img src="assets/manta_wink.png" alt="Contributing" width="44" /> Contributing
 
 Use-It Agent is built in the open, and it grows with every adapter, workflow, and bug report you bring in. Whether you are a developer adding a new pro-software adapter, a designer sharing a real workflow, or a user filing your first issue, you are welcome here.
@@ -122,4 +225,3 @@ Track progress and propose ideas in [GitHub Issues](https://github.com/UseIt-AI/
 We gratefully acknowledge MiraclePlus (YC China) for supporting this project.
 
 <img src="assets/MiraclePlus.jpg" alt="MiraclePlus logo" width="180" />
-

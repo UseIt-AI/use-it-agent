@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./useit-logo-no-text.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USEIT STUDIO</title>
+    <style>
+      #app-loading {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        background: #F8F9FA;
+        z-index: 9999;
+        transition: opacity 0.25s ease;
+      }
+      #app-loading-logo {
+        width: 56px;
+        height: 56px;
+      }
+      #app-loading-title {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        color: #111827;
+        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+      #app-loading-spinner {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #e5e7eb;
+        border-top-color: #f97316;
+        border-radius: 50%;
+        animation: app-spin 0.8s linear infinite;
+        margin-top: 8px;
+      }
+      @keyframes app-spin { to { transform: rotate(360deg); } }
+    </style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+  </head>
+  <body>
+    <!-- #app-loading 在 #root 外，React 不会清除它，由 ProtectedRoute 在 auth 完成后移除 -->
+    <div id="app-loading">
+      <img id="app-loading-logo" src="./useit-logo-no-text.svg" alt="" />
+      <div id="app-loading-title">USEIT Studio</div>
+      <div id="app-loading-spinner"></div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

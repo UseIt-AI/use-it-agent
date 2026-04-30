@@ -1,0 +1,443 @@
+{
+  "workspace": {
+    "header": {
+      "home": "首页",
+      "switchProject": "切换项目",
+      "newProject": "新建项目",
+      "toggleDebugMode": "切换调试模式",
+      "collapseToSidebar": "收起到侧边栏",
+      "expandToWorkspace": "查看工作流",
+      "expandTooltip": "管理文件、虚拟机与工作流",
+      "guideTour": "新手引导",
+      "minimize": "最小化",
+      "maximize": "最大化",
+      "restore": "还原",
+      "close": "关闭",
+      "untitledProject": "未命名项目",
+      "newChat": "新对话",
+      "history": "历史记录",
+      "localMachine": "本机 (This PC)"
+    },
+    "chat": {
+      "collapsePanel": "收起聊天面板",
+      "expandPanel": "展开聊天面板",
+      "taskStoppedByUser": "任务已被用户停止",
+      "loadingWorkflow": "加载工作流...",
+      "thinking": "思考中...",
+      "planningNextMove": "规划下一步...",
+      "waitingForUserChoice": "等待用户选择...",
+      "inputPlaceholder": "输入消息...",
+      "selectAgent": "选择 Agent",
+      "send": "发送",
+      "stop": "停止",
+      "defaultWelcome": "你好！请选择一个工作流开始对话。"
+    },
+    "upload": {
+      "title": "上传文件",
+      "titleFailed": "上传失败",
+      "subtitle": "已上传 {{uploaded}} / {{total}} 个文件",
+      "subtitleError": "上传过程中发生错误",
+      "errorDetails": "错误信息",
+      "currentlyUploading": "正在上传",
+      "files": "个文件",
+      "cancel": "取消",
+      "close": "关闭",
+      "cancelUpload": "取消上传",
+      "successMessage": "成功上传 {{uploaded}}/{{total}} 个文件",
+      "alreadyUpToDate": "均为最新版本，无需上传"
+    },
+    "uploadConfirm": {
+      "title": "同步确认",
+      "description": "你在本地删除了 {{count}} 个文件，是否同步删除云端的这些文件？",
+      "hint": "这些可能是运行时产生的临时文件",
+      "local": "本地",
+      "cloud": "云端",
+      "localTitle": "同步删除",
+      "localDesc": "从云端删除这些文件，与本地保持一致",
+      "cloudTitle": "保留云端",
+      "cloudDesc": "保留云端的这些文件，仅上传本地文件",
+      "filesWillDelete": "这些文件将从云端删除 ({{count}})",
+      "filesWillKeep": "这些文件将在云端保留 ({{count}})",
+      "unknownFile": "未知文件",
+      "cancel": "取消",
+      "confirm": "确认"
+    },
+    "sync": {
+      "title": "从云端同步文件",
+      "titleFailed": "同步失败",
+      "subtitle": "正在同步 {{downloaded}} / {{total}} 个文件",
+      "subtitleError": "同步过程中发生错误",
+      "errorDetails": "错误信息",
+      "files": "文件",
+      "cancel": "取消",
+      "close": "关闭",
+      "cancelSync": "取消同步"
+    },
+    "explore":{
+      "title":"Use It",
+      "panelHint":"提供一个最简洁可用的Chat工作流，帮忙您快速体验这个产品的神奇之处"
+    },
+    "fileExplorer": {
+      "title": "FILE EXPLORER",
+      "panelHint": "上传和管理与 Agent 共享的文件。放在这里的文档、图片、代码可以在任务中被 Agent 直接读取。",
+      "addToWorkspace": "点击选择文件，复制到工作区",
+      "addToWorkspaceTitle": "点击选择单个或多个文件，复制到当前项目 workspace 目录",
+      "copyingToWorkspace": "正在复制…",
+      "dragHint": "拖拽文件到此处复制",
+      "skillsDragHint": "拖拽技能到此处复制",
+      "dropToCopy": "释放后复制",
+      "unlockDialog": {
+        "title": "解锁确认",
+        "subtitle": "您即将解锁受保护的项目文件",
+        "file": "文件",
+        "folder": "文件夹",
+        "warningTitle": "警告",
+        "warningDescription": "解锁后，该{{type}}将可以被编辑、移动或删除。",
+        "folderWarningExtra": "文件夹内的文件不受影响，但文件夹本身将不再受保护。",
+        "tipTitle": "提示：",
+        "tipDescription": "若文件目录产生变动可能会造成部分功能无法正常使用，请谨慎操作。",
+        "cancel": "取消",
+        "confirm": "确认解锁"
+      },
+      "deleteFileTitle": "删除文件？",
+      "deleteFolderTitle": "删除文件夹？",
+      "deleteMultiTitle": "删除 {{count}} 个项目？",
+      "deleteDescription": "确定要删除 \"{{name}}\" 吗？此操作无法撤销。",
+      "deleteMultiDescription": "确定要删除 {{count}} 个已选项目吗？此操作无法撤销。",
+      "recycleBinTitle": "确定要删除“{{name}}”吗？",
+      "recycleBinMultiTitle": "确定要删除 {{count}} 个项目吗？",
+      "recycleBinDescription": "你可以在回收站中恢复该项目。",
+      "recycleBinMultiDescription": "你可以在回收站中恢复这些项目。",
+      "moveToRecycleBin": "移到回收站",
+      "deleteConfirm": "删除",
+      "deleteCancel": "取消",
+      "error": {
+        "duplicateTitle": "名称已存在",
+        "duplicateDescription": "当前目录中已存在同名文件或文件夹，请使用其他名称。",
+        "operationFailed": "操作失败",
+        "ok": "确定"
+      },
+      "contextMenu": {
+        "newFile": "新建文件",
+        "newFolder": "新建文件夹",
+        "importFiles": "导入文件...",
+        "rename": "重命名",
+        "copy": "复制",
+        "cut": "剪切",
+        "paste": "粘贴",
+        "addToChat": "添加到聊天",
+        "copyPath": "复制文件路径",
+        "copyRelativePath": "复制相对路径",
+        "addSelectedToChat": "批量添加到聊天",
+        "showInFolder": "在文件资源管理器中打开",
+        "delete": "删除"
+      }
+    },
+    "search": {
+      "title": "搜索",
+      "panelHint": "按文件名快速查找工作区中的文件。",
+      "placeholder": "搜索文件...",
+      "results": "搜索结果",
+      "noResults": "未找到匹配的文件",
+      "hint": "输入文件名进行搜索"
+    },
+    "skills": {
+      "title": "Skills",
+      "panelHint": "浏览和管理可复用的技能模块。技能让 Agent 能执行网页抓取、数据处理等专项任务。"
+    },
+    "workflow": {
+      "title": "工作流",
+      "panelHint": "创建和管理自动化工作流。每个工作流定义了 Agent 完成任务的一系列执行步骤。"
+    },
+    "vmInstall": {
+      "idle": {
+        "title": "安装虚拟机",
+        "subtitle": "下载 Windows ISO 并自动安装（约 15-20 分钟）",
+        "setupSteps": "安装步骤",
+        "step1": "下载 Windows ISO",
+        "step1Desc": "Windows 10/11 x64（非 ARM）。官方评估版 ISO，免费 90 天。",
+        "step2": "选择已下载的 ISO 文件",
+        "step3": "等待自动安装完成",
+        "selectIso": "选择 ISO 文件",
+        "restoreTitle": "从 VM 文件夹恢复",
+        "restoreDesc": "导入现有的 Hyper-V 虚拟机文件夹并自动加载检查点。",
+        "selectVmFolder": "选择 VM 文件夹",
+        "envReady": "虚拟机就绪",
+        "envRequired": "需要配置虚拟机"
+      },
+      "isoConfirm": {
+        "title": "你下载好 Windows ISO 了吗？",
+        "subtitle": "可以使用微软官方链接或其他可靠来源。",
+        "yesSelect": "已下载，选择 ISO 文件…",
+        "notYet": "还没有，打开下载页面",
+        "cancel": "取消"
+      },
+      "vmNameLabel": "虚拟机名称",
+      "vmNameHint": "使用默认名称或按需修改。",
+      "config": {
+        "title": "配置安装",
+        "subtitle": "确认设置并开始安装",
+        "isoSelected": "已选择 ISO",
+        "changeIso": "更换 ISO →",
+        "installDir": "安装目录",
+        "browse": "浏览",
+        "advancedSettings": "高级设置",
+        "username": "用户名：",
+        "password": "密码：",
+        "vncPort": "VNC 端口：",
+        "startInstall": "开始安装",
+        "freeSpace": "剩余 {{size}} GB",
+        "needSpace": "至少需要 {{size}} GB"
+      },
+      "installing": {
+        "title": "正在安装虚拟机",
+        "subtitle": "大约需要 15-20 分钟，安装期间可以继续使用应用。",
+        "doNotClose": "安装过程中请勿关闭应用程序",
+        "stepOf": "步骤 {{current}} / {{total}}"
+      },
+      "complete": {
+        "title": "安装完成！",
+        "subtitle": "虚拟机已准备就绪。",
+        "vmReady": "虚拟机就绪",
+        "clickConnect": "点击连接并开始使用虚拟机。",
+        "connectNow": "立即连接"
+      },
+      "error": {
+        "title": "安装失败",
+        "subtitle": "安装过程中出现了问题。",
+        "details": "错误详情",
+        "tryAgain": "重试",
+        "installFailed": "安装失败",
+        "selectIso": "请先选择 Windows ISO 文件",
+        "restoreFailed": "恢复失败"
+      },
+      "restore": {
+        "importing": "正在从选定文件夹导入虚拟机...",
+        "completedDiskFallback": "已从磁盘链恢复完成。检查点树元数据可能不可用。",
+        "completedWithCheckpoints": "恢复完成，已加载 {{count}} 个检查点。",
+        "completed": "恢复完成。"
+      }
+    },
+    "vmConnect": {
+      "checking": {
+        "title": "正在检查环境",
+        "subtitle": "正在验证虚拟机配置...",
+        "pleaseWait": "请稍候..."
+      },
+      "unsupported": {
+        "title": "不支持虚拟机",
+        "subtitle": "当前 Windows 版本不支持本地虚拟机。",
+        "requirePro": "需要 Windows 专业版/企业版",
+        "requireProDesc": "本地虚拟机需要受支持的 Windows 版本（专业版、企业版或教育版）。"
+      },
+      "recheckEnvironment": "重新检查环境",
+      "noHyperV": {
+        "title": "虚拟机功能未启用",
+        "subtitle": "请在 Windows 功能中启用虚拟机功能",
+        "enableTitle": "启用虚拟机功能",
+        "enableDesc": "使用本地虚拟机需要在 Windows 功能中启用虚拟机功能，启用后需要重启系统。",
+        "enableButton": "启用虚拟机",
+        "enableFailed": "启用虚拟机功能失败。请同意管理员提示或在 Windows 功能中手动启用。",
+        "enableNeedsReboot": "虚拟机功能已启用。请重启 Windows，然后点击「重新检查环境」。",
+        "enableSuccess": "虚拟机功能已成功启用。正在重新检查环境...",
+        "enableRetryFailed": "启用虚拟机功能失败。请以管理员权限重试。"
+      },
+      "permission": {
+        "title": "需要权限",
+        "subtitle": "管理虚拟机需要管理员权限。",
+        "fixTitle": "一键修复权限",
+        "fixDesc": "我们将请求一次 Windows 管理员授权，将你的账户添加到所需的系统组，之后需要注销并重新登录。",
+        "fixButton": "修复权限"
+      },
+      "connect": {
+        "title": "连接到桌面",
+        "subtitle": "启动虚拟机并连接",
+        "permissionRequired": "需要权限",
+        "permissionDesc": "需要虚拟机管理员权限。修复后需要注销并重新登录。",
+        "fixPermission": "修复权限",
+        "vmSettings": "虚拟机设置",
+        "vmNameLabel": "虚拟机名称",
+        "osPasswordLabel": "系统登录密码",
+        "quickConnect": "快速连接",
+        "checking": "检测中..."
+      },
+      "sanitizedError": "执行虚拟机命令失败。请使用「修复权限」或重新检查虚拟机环境。",
+      "agent": {
+        "required": "需要 UseIt Agent",
+        "updateAvailable": "Agent 有更新",
+        "requiredDesc": "AI 控制功能所需",
+        "versionAvailable": "v{{version}} 可用",
+        "install": "安装",
+        "update": "更新",
+        "installing": "正在安装 Agent...",
+        "installFailed": "Agent 安装失败",
+        "retry": "重试"
+      },
+      "steps": {
+        "idle": "就绪",
+        "checking": "正在检查虚拟机状态...",
+        "starting": "正在启动虚拟机...",
+        "waitingIp": "正在等待 IP 地址...",
+        "connecting": "正在连接 VNC...",
+        "connected": "已连接",
+        "error": "连接失败"
+      },
+      "remote": {
+        "ipAddress": "IP 地址 *",
+        "ipPlaceholder": "192.168.x.x 或公网 IP",
+        "username": "用户名（可选）",
+        "usernamePlaceholder": "登录用户名",
+        "advancedSettings": "高级设置",
+        "vncPassword": "VNC 密码",
+        "osPassword": "系统登录密码",
+        "vncPort": "VNC 端口",
+        "wsPort": "WS 端口",
+        "connect": "连接"
+      }
+    },
+    "environment": {
+      "title": "Agent Environment",
+      "panelHint": "查看和管理 Agent 的运行环境 —— 本机或虚拟机。连接、监控状态、切换运行目标。",
+      "actions": {
+        "addVm": "Add VM",
+        "exportVm": "Export VM (.vmcx)",
+        "browse": "Browse",
+        "deleteVm": "Delete VM",
+        "deleteFromHardware": "Delete from hardware",
+        "deleteFromSoftware": "Delete software only",
+        "cancel": "Cancel",
+        "ok": "OK"
+      },
+      "exportDialog": {
+        "title": "Export \"{{name}}\"",
+        "description": "Choose an export path and keep this dialog open while exporting.",
+        "saving": "Exporting VM..."
+      },
+      "deleteDialog": {
+        "title": "Delete \"{{name}}\"",
+        "description": "Choose how to delete this VM environment."
+      },
+      "notices": {
+        "title": "Environment Action",
+        "exportSuccess": "VM exported successfully to: {{path}}"
+      },
+      "errors": {
+        "deleteFailed": "Failed to delete VM environment",
+        "exportFailed": "Failed to export VM",
+        "exportPathRequired": "Please provide an export path"
+      }
+    },
+    "project": {
+      "title": "Project",
+      "panelHint": "创建、切换和管理你的项目。选择一个项目进入工作区，或新建一个开始探索。"
+    },
+    "api": {
+      "title": "API Providers",
+      "panelHint": "配置 LLM 供应商的 API 密钥。Agent 需要这些密钥来调用 AI 模型。"
+    },
+    "remote": {
+      "title": "Remote Control",
+      "panelHint": "从其他设备控制 Agent。扫描二维码或在手机上输入 URL，即可远程发送指令。"
+    },
+    "team": {
+      "title": "团队",
+      "panelHint": "与团队成员协作，共享项目、工作流和资源。"
+    },
+    "snapshots": {
+      "title": "Snapshots",
+      "placeholder": "Snapshot name (optional)",
+      "loading": "Loading snapshots...",
+      "empty": "No snapshots yet",
+      "tabs": {
+        "monitor": "Monitor",
+        "settings": "Settings",
+        "snapshots": "Snapshots"
+      },
+      "mode": {
+        "saveState": "Save state",
+        "noSaveState": "No state"
+      },
+      "node": {
+        "state": "State",
+        "noState": "No state",
+        "current": "Current"
+      },
+      "actions": {
+        "refresh": "Refresh snapshots",
+        "create": "Create",
+        "restore": "Restore",
+        "restoring": "Restoring...",
+        "restoreConfirm": "Restore to snapshot \"{{name}}\"? This will revert the VM."
+      },
+      "errors": {
+        "loadFailed": "Failed to load snapshots",
+        "createFailed": "Failed to create snapshot",
+        "restoreFailed": "Failed to restore snapshot",
+        "apiNotAvailable": "Snapshot API is not available yet. Please restart the desktop app."
+      }
+    }
+  },
+  "membership": {
+    "backToPlan": "返回套餐",
+    "selectPlan": "选择您的套餐",
+    "manageSubscription": "管理您的订阅",
+    "settings": "设置",
+    "recommend": "推荐",
+    "perMonth": "/月",
+    "validity": "有效期1个月",
+    "currentPlan": "当前套餐",
+    "subscribe": "订 阅",
+    "subscribe_success":"订阅成功",
+    "plans": {
+      "free": {
+        "title": "免费",
+        "features": ["2000点数/月", "每天约3次自动化"]
+      },
+      "pro": {
+        "title": "专业版",
+        "features": ["5000点数/月", "每天约15次自动化", "高峰时段优先使用", "支持自定义模型API", "探索项目、任务和自定义 GPT"]
+      },
+      "enterprise": {
+        "title": "旗舰版",
+        "features": ["15000点数/月", "每天约50次自动化", "高峰时段优先使用", "支持自定义模型API", "探索项目、任务和自定义 GPT", "获取规划与任务协助", "轻松处理大型项目"]
+      }
+    },
+    "payment": {
+      "title": "付款方式",
+      "cardNumber": "卡号",
+      "expirationDate": "有效期",
+      "cvv": "安全码",
+      "billingAddress": "账单地址",
+      "fullName": "全名",
+      "country": "国家",
+      "zip": "邮编",
+      "planSuffix": "套餐",
+      "popularFeatures": "热门功能",
+      "subscriptionType": "订阅方式",
+      "monthly": "按月订阅",
+      "originalPrice": "原价格",
+      "totalDue": "今日应付金额",
+      "subscribeButton": "订阅",
+      "subscribeSuccess": "订阅成功",
+      "error": "支付失败，请重试"
+    }
+  },
+  "deploy": {
+    "checkingFiles": "检查服务文件...",
+    "checkingVm": "检查虚拟机状态...",
+    "creatingDirs": "创建安装目录...",
+    "enablingGuestService": "启用 Guest Service Interface...",
+    "deploying": "部署 {{serviceName}}...",
+    "preparingArchive": "{{serviceName}}: 准备压缩包...",
+    "preparingTransfer": "{{serviceName}}: 准备传输...",
+    "transferring": "{{serviceName}}: 传输到虚拟机...",
+    "extracting": "{{serviceName}}: 解压安装...",
+    "configuringFirewall": "配置防火墙规则...",
+    "registeringServices": "注册服务...",
+    "startingServices": "启动服务...",
+    "complete": "服务部署完成！",
+    "failed": "部署失败",
+    "pleaseWait": "请稍候..."
+  }
+}
+
