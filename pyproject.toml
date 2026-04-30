@@ -7,7 +7,7 @@ name = "useit-studio"
 version = "0.1.0"
 description = "UseIt Studio OSS — gateway + AI Run (LangChain) monorepo package"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "aiohttp",
     "fastapi>=0.110",
