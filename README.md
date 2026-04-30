@@ -177,7 +177,7 @@ This starts both the Vite dev server (`http://127.0.0.1:3000`) and Electron.
 | Agent not responding | Confirm your API key is set in `.env` and `.[agent]` extras are installed |
 | `useit-unified` not found | Activate your virtual environment first |
 | Local-engine features missing | Requires Windows + target professional software installed |
-| `pywin32` fails on macOS/Linux | Use `pip install -e ".[agent,dev]"` to skip Windows-only packages |
+| `pywin32` fails on macOS/Linux | Mac OS support coming soon |
 
 ## <img src="assets/manta_wink.png" alt="Contributing" width="44" /> Contributing
 
