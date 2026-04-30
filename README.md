@@ -119,8 +119,6 @@ Create and activate a virtual environment, then install:
 ```bash
 python -m venv .venv
 
-# macOS / Linux
-source .venv/bin/activate
 # Windows PowerShell
 # .venv\Scripts\Activate.ps1
 
@@ -141,34 +139,26 @@ Copy the example env file and add your API key:
 cp env.example .env
 ```
 
-Open `.env` and set at least one LLM provider key.
+Open `.env` and add your LLM API key:
 
 ```bash
 # Google Gemini
 GOOGLE_API_KEY=...
 ```
 
-To change the default model or provider, edit `config/llm_config.json`. The `"default"` entry controls which model the agent uses unless otherwise specified.
+To switch models or providers, edit `config/llm_config.json` — the `"default"` entry controls which model the agent uses.
 
-### 5) Start the backend
-
-Default port is `8001`. Start the unified server:
+### 4) Start the backend
 
 ```bash
 useit-unified
-# or equivalently
-python -m useit_studio.gateway.unified_main
 ```
 
-You should see the server start on `http://0.0.0.0:8001`. Verify with:
+Once running, verify at `http://127.0.0.1:8001/health`.
 
-```bash
-curl http://127.0.0.1:8001/health
-```
+### 5) Start the frontend
 
-### 6) Start the frontend (Electron)
-
-In a new terminal, from the repo root:
+Open a **new terminal** from the repo root:
 
 ```bash
 cd frontend
@@ -177,25 +167,17 @@ echo "VITE_API_URL=http://127.0.0.1:8001" > .env.local
 npm run dev
 ```
 
-`npm run dev` launches both the Vite dev server (port `3000`) and Electron together.
+This starts both the Vite dev server (`http://127.0.0.1:3000`) and Electron.
 
-### 7) Ports at a glance
-
-| Service | URL |
-|---|---|
-| Backend API | `http://127.0.0.1:8001` |
-| Backend health | `http://127.0.0.1:8001/health` |
-| Frontend Vite dev | `http://127.0.0.1:3000` |
-
-### 8) Troubleshooting
+### Troubleshooting
 
 | Symptom | Fix |
 |---|---|
-| Frontend cannot connect to backend | Check that `VITE_API_URL` in `frontend/.env.local` matches the backend port (`8001` by default) |
-| `AI_Run` not mounted / agent not responding | Confirm `.[agent]` extras are installed; check that at least one LLM API key is set in `.env` |
-| `useit-unified` command not found | Make sure your virtual environment is activated and you ran `pip install -e ".[agent,...]"` |
-| Local-engine features unavailable | These require Windows with the target professional software installed (Office, AutoCAD, etc.) |
-| `pywin32` install fails on macOS/Linux | Use `pip install -e ".[agent,dev]"` instead to skip Windows-only packages |
+| Frontend cannot connect | Verify `VITE_API_URL` in `frontend/.env.local` matches the backend port |
+| Agent not responding | Confirm your API key is set in `.env` and `.[agent]` extras are installed |
+| `useit-unified` not found | Activate your virtual environment first |
+| Local-engine features missing | Requires Windows + target professional software installed |
+| `pywin32` fails on macOS/Linux | Use `pip install -e ".[agent,dev]"` to skip Windows-only packages |
 
 ## <img src="assets/manta_wink.png" alt="Contributing" width="44" /> Contributing
 
